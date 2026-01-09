@@ -1,0 +1,228 @@
+/* 
+   Setup environment
+   Lina
+   DO NOT EDIT WITHOUT AGREEMENT
+   ========================================================= */
+
+:root {
+  /* Colors */
+  --clr-primary: #ba4270;
+  --clr-primary-hover: #da6d97;
+  --clr-dark: #1b262f;
+  --clr-dark-2: #36536b;
+  --clr-light: #fbfcfe;
+  --clr-muted: #6c8294;
+  --clr-active: #ff0000;
+
+  /* Typography */
+  --ff-heading: "DM Serif Display", serif;
+  --ff-body: "Public Sans", sans-serif;
+
+  /* Layout */
+  --container-max: 1440px;
+  --container-pad: 24px;
+
+  /* Breakpoints */
+  --bp-tablet: 768px;
+  --bp-desktop: 1024px;
+}
+
+/* ===== RESET / BASE ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-body);
+  background: var(--clr-light);
+  color: var(--clr-dark-2);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Accessibility helper */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===== APP WRAPPER ===== */
+.app {
+  min-height: 100vh;
+  overflow-x: hidden; /* safety net */
+}
+
+/* ===== GLOBAL CONTAINER ===== */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+
+/* ===== COMPONENTS (shared) ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  border-radius: 24px;
+
+  font-family: var(--ff-body);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: -0.12px;
+
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease, color 0.2s ease; /* kad mygtuko spalva keistusi minkstai*/
+}
+
+.btn--primary {
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  opacity: 1;
+  width: 327px;
+}
+
+.btn--primary:hover {
+  background-color: var(--clr-primary-hover);
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: var(--clr-light);
+  border: 1px solid currentColor;
+}
+
+.btn--secondary:hover {
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+}
+
+.btn--disabled,
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn--full {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  border: 0;
+  border-radius: 24px;
+  padding: 14px 24px; /* px - pakeisi pagal dizainą */
+  font-size: 15px;
+  font-family: var(--ff-body);
+}
+
+/* =========================================================
+   
+   Kiekvienas DEV redaguoja tik savo bloką. */
+
+/* =========================================================
+   VH3-2 Header / Navigation
+   Rokas =>>  */
+.header {
+}
+.header__inner {
+}
+
+/* =========================================================
+   VH3-9 Hero
+   Edvinas =>>   */
+.hero {
+}
+.hero__inner {
+}
+
+/* =========================================================
+   VH3-3 Who we work with
+   Kristina =>>    */
+.partners {
+}
+.partners__inner {
+}
+
+/* =========================================================
+   VH3-4 Easy to implement
+   Kristina =>> */
+.implement {
+}
+.implement__inner {
+}
+
+/* =========================================================
+   VH3-5 Simple UI
+   Vaiva =>> */
+.uiux {
+}
+.uiux__inner {
+}
+/* DEV VH3-5 styles here */
+
+/* =========================================================
+   VH3-6 Features
+   Vaiva =>> */
+.features {
+}
+.features__inner {
+}
+
+/* =========================================================
+   VH3-7 Ready to start?
+   Lina =>> */
+.cta {
+}
+.cta__inner {
+}
+
+/* =========================================================
+   VH3-8 Footer
+   Edvinas =>> */
+.footer {
+}
+.footer__inner {
+}
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS (optional)
+   Kiekvienas DEV gali pridėti savo media prie savo blokų,
+   bet bendri breakpoint'ai čia. */
+@media (min-width: 768px) {
+  .btn--primary {
+    width: 173px; /* Pradedan nuo mobile, todel mygtukas keisis cia i mazesni*/
+  }
+}
+
+@media (min-width: 1024px) {
+}
