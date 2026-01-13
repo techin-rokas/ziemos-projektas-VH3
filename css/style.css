@@ -176,7 +176,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px;
+  padding: 0;
 }
 
 .main-nav,
@@ -512,11 +512,14 @@ a {
   /*ROKAS -> */
 
   .header {
-    padding: 40px 40px;
+    padding: 40px;
   }
 
   .header__inner {
-    padding: 0px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
   }
 
   .burger {
@@ -525,12 +528,6 @@ a {
 
   .side-menu {
     display: none;
-  }
-
-  .header__inner {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
   }
 
   .main-nav {
