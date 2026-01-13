@@ -13,7 +13,7 @@
   --clr-light: #fbfcfe;
   --clr-muted: #6c8294;
   --clr-active: #ff0000;
-  --bg-color: #EDF3F8;
+  --bg-color: #edf3f8;
 
   /* Typography */
   --ff-heading: "DM Serif Display", serif;
@@ -44,7 +44,7 @@ body {
   margin: 0;
   font-family: var(--ff-body);
   color: var(--clr-dark-2);
-  background-color: var(--bg-color)
+  background-color: var(--bg-color);
 }
 h1,
 h2,
@@ -298,7 +298,8 @@ a {
   overflow: hidden;
   border-radius: 8px;
   background: transparent;
-  filter: drop-shadow(0 25px 80px rgba(54, 83, 107, 0.22)) drop-shadow(0 10px 25px rgba(54, 83, 107, 0.1));
+  filter: drop-shadow(0 25px 80px rgba(54, 83, 107, 0.22))
+    drop-shadow(0 10px 25px rgba(54, 83, 107, 0.1));
 }
 
 .implement_img {
@@ -363,9 +364,7 @@ a {
     height: auto;
   }
 
-
   .implement__text {
-
     width: 100%;
     height: auto;
     margin-top: 0;
@@ -435,10 +434,10 @@ a {
 .cta {
   padding-top: 88px;
   padding-bottom: 80px;
-  background: var(--bg-color)
+  background: var(--bg-color);
 }
 .cta__inner {
-   display: grid;
+  display: grid;
   gap: 21px;
   justify-items: center;
   text-align: center;
@@ -506,9 +505,8 @@ a {
    Kiekvienas DEV gali pridėti savo media prie savo blokų,
    bet bendri breakpoint'ai čia. */
 
-   /*TABLET*/
+/*TABLET*/
 @media (min-width: 768px) {
-
   /*ROKAS -> */
 
   .header {
@@ -562,12 +560,11 @@ a {
   .cta {
     padding-top: 111px;
     padding-bottom: 100px;
-    
   }
   .cta__inner {
     gap: 24px;
   }
-  .cta__title{
+  .cta__title {
     font-size: 48px;
     line-height: 56px;
     letter-spacing: -0.37px;
@@ -579,7 +576,7 @@ a {
     margin: 0;
     max-width: 445px;
   }
-  
+
   .cta__form {
     max-width: 445px;
     margin-inline: auto;
@@ -591,7 +588,6 @@ a {
     background: #fff;
     border-radius: 24px;
     box-shadow: 0 10px 25px rgba(54, 83, 107, 0.25);
-    
   }
   .cta__input {
     background: transparent;
@@ -602,30 +598,26 @@ a {
     padding-bottom: 15px;
   }
 
-  .cta__btn{
+  .cta__btn {
     width: 173px;
   }
   /*===============================*/
-
-  
 }
 
 /*DESKTOP*/
 @media (min-width: 1024px) {
+  /*ROKAS -> */
+  .header__inner {
+    max-width: 1189px;
+    padding: 0 40px;
+  }
+  /*=====================================*/
 
-/*ROKAS -> */
-.header__inner {
-  max-width: 1189px;
-  padding: 0 40px;
-}
-/*=====================================*/
+  /*LINA -> */
 
-/*LINA -> */
-
- .cta {
+  .cta {
     padding-top: 105px;
     padding-bottom: 80px;
-
   }
   .cta__inner {
     padding-left: 165px;
