@@ -493,14 +493,71 @@ a {
 }
 
 /* =========================================================
-   VH3-8 Footer
-   Edvinas =>> */
+    VH3-8 Footer
+    Edvinas =>> */
+
 .footer {
-}
-.footer__inner {
+  background-color: var(--clr-dark);
+  padding: 40px 0;
+  /* Fonas su apskritimu (pagal dizainą mobile) */
+  background-image: url('./assets/shared/desktop/bg-pattern-circle.svg');
+  background-repeat: no-repeat;
+  background-position: center -180px;
 }
 
-/* =========================================================
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer__logo-img {
+  width: 135px;
+  height: auto;
+  /* Padarom logotipą baltą, jei naudojamas originalus spalvotas png/svg */
+  filter: brightness(0) invert(1);
+}
+
+.footer__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer__link {
+  font-family: var(--ff-body);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--clr-light);
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.footer__link:hover {
+  opacity: 1;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.footer__social-link {
+  color: var(--clr-light);
+  transition: color 0.2s ease;
+}
+
+.footer__social-link:hover {
+  /* Dizaine nurodyta variklio spalva užvedus (clr-primary-hover arba panaši) */
+  color: var(--clr-primary-hover);
+}
+
+/* 
+=========================================================
    RESPONSIVE BREAKPOINTS (optional)
    Kiekvienas DEV gali pridėti savo media prie savo blokų,
    bet bendri breakpoint'ai čia. */
@@ -602,6 +659,27 @@ a {
     width: 173px;
   }
   /*===============================*/
+
+  /*Edvinas*/
+  .footer {
+    padding: 30px 0;
+    background-position: center right -200px; /* Apskritimas pasislenka */
+  }
+
+  .footer__inner {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 64px;
+  }
+
+  .footer__links {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .footer__socials {
+    margin-left: auto; /* Nustumia ikonas į dešinę */
+  }
 }
 
 /*DESKTOP*/
@@ -632,4 +710,18 @@ a {
     justify-self: end;
   }
   /*=====================================*/
+  /*Edvinas*/
+   .footer {
+    padding: 35px 0;
+  }
+
+  .footer__inner {
+    /* Naudojame tavo nustatytus Desktop paddingus kaip header'yje */
+    max-width: 1189px; 
+    padding: 0 40px;
+  }
+  
+  .footer {
+      background-position: calc(100% + 150px) center;
+  }
 }
