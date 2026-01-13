@@ -262,8 +262,139 @@ a {
    VH3-4 Easy to implement
    Kristina =>> */
 .implement {
+  background: var(--bg-color);
 }
+
 .implement__inner {
+  padding: 0;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.implement_content,
+.implement_media {
+  width: min(328px, 100%);
+}
+
+.implement_media {
+  margin: 80px 0 47px;
+  aspect-ratio: 328 / 209;
+  overflow: hidden;
+  border-radius: 8px;
+  background: transparent;
+  filter: drop-shadow(0 25px 80px rgba(54, 83, 107, 0.22)) drop-shadow(0 10px 25px rgba(54, 83, 107, 0.1));
+}
+
+.implement_img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.implement__title,
+.implement__text {
+  margin: 0;
+}
+
+.implement__title {
+  width: 100%;
+  max-width: 328px;
+  margin: 0;
+  font-family: var(--ff-heading);
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.28px;
+  color: var(--clr-dark-2);
+}
+
+.implement__text {
+  width: min(328px, 100%);
+  margin-top: 12px;
+  font-family: var(--ff-body);
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 300;
+  color: var(--clr-muted);
+  text-align: center;
+}
+
+/* ===== TABLET (768–1023) ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .implement__inner {
+    padding: 100px 98px;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .implement_media {
+    width: min(392px, 100%);
+    aspect-ratio: 392 / 250;
+    margin: 0 0 32px;
+  }
+
+  .implement_content {
+    width: min(573px, 100%);
+  }
+
+  .implement__title {
+    width: 100%;
+    max-width: 573px;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.37px;
+    text-align: center;
+    height: auto;
+  }
+
+
+  .implement__text {
+
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    text-align: center;
+    letter-spacing: 0;
+  }
+}
+
+/* ===== DESKTOP (>=1024) ===== */
+@media (min-width: 1024px) {
+  .implement__inner {
+    grid-template-columns: 445px 445px;
+    column-gap: 125px;
+    align-items: center;
+    justify-items: start;
+    text-align: left;
+
+    padding: 150px 260px 150px 165px;
+  }
+
+  .implement_media {
+    width: 445px;
+    height: 284px;
+    aspect-ratio: auto;
+    margin: 0;
+  }
+
+  .implement_content {
+    width: 445px;
+  }
+
+  .implement__title {
+    max-width: 100%;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.37px;
+    text-align: left;
+  }
+
+  .implement__text {
+    width: 445px;
+    margin-top: 12px;
+    text-align: left;
+  }
 }
 
 /* =========================================================
