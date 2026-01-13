@@ -13,7 +13,7 @@
   --clr-light: #fbfcfe;
   --clr-muted: #6c8294;
   --clr-active: #ff0000;
-  --bg-color: #EDF3F8;
+  --bg-color: #edf3f8;
 
   /* Typography */
   --ff-heading: "DM Serif Display", serif;
@@ -44,13 +44,19 @@ body {
   margin: 0;
   font-family: var(--ff-body);
   color: var(--clr-dark-2);
-  background-color: var(--bg-color)
+  background-color: var(--bg-color);
 }
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p {
   margin: 0;
 }
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
 }
@@ -161,13 +167,21 @@ a {
    VH3-2 Header / Navigation
    Rokas =>>  */
 .header {
+  min-height: 48px;
+  padding: 40px 24px;
+  margin: 0 auto;
 }
-
 .header__inner {
+  min-height: inherit;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40.76px 24px 58.48px 24.76px;
+  padding: 0;
+}
+
+.main-nav,
+.header__btn {
+  display: none;
 }
 
 .logo__button:hover {
@@ -199,18 +213,20 @@ a {
 .side-menu {
   position: fixed;
   top: 0;
-  right: -297px;
+  right: 0;
   width: 297px;
   height: 100vh;
   background: var(--clr-dark);
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
-  transition: right 0.3s ease;
+  transform: translate(100%);
+  transition: transform 0.3s ease;
+  will-change: transform;
   z-index: 2000;
 }
 .side-menu.open {
-  right: 0;
+  transform: translate(0);
 }
 .side-menu__nav {
   display: flex;
@@ -240,7 +256,6 @@ a {
   width: 100%;
   margin-top: 30px;
 }
-
 
 /* =========================================================
    VH3-9 Hero
@@ -283,7 +298,8 @@ a {
   overflow: hidden;
   border-radius: 8px;
   background: transparent;
-  filter: drop-shadow(0 25px 80px rgba(54, 83, 107, 0.22)) drop-shadow(0 10px 25px rgba(54, 83, 107, 0.1));
+  filter: drop-shadow(0 25px 80px rgba(54, 83, 107, 0.22))
+    drop-shadow(0 10px 25px rgba(54, 83, 107, 0.1));
 }
 
 .implement_img {
@@ -348,9 +364,7 @@ a {
     height: auto;
   }
 
-
   .implement__text {
-
     width: 100%;
     height: auto;
     margin-top: 0;
@@ -420,10 +434,10 @@ a {
 .cta {
   padding-top: 88px;
   padding-bottom: 80px;
-  background: var(--bg-color)
+  background: var(--bg-color);
 }
 .cta__inner {
-   display: grid;
+  display: grid;
   gap: 21px;
   justify-items: center;
   text-align: center;
@@ -491,20 +505,66 @@ a {
    Kiekvienas DEV gali pridėti savo media prie savo blokų,
    bet bendri breakpoint'ai čia. */
 
-   /*TABLET*/
+/*TABLET*/
 @media (min-width: 768px) {
+  /*ROKAS -> */
+
+  .header {
+    padding: 40px;
+  }
+
+  .header__inner {
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .side-menu {
+    display: none;
+  }
+
+  .main-nav {
+    display: flex;
+    gap: 40px;
+    margin-left: 60px;
+    margin-right: auto;
+  }
+
+  .main-nav a {
+    font-family: var(--ff-body);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--clr-dark-2);
+    opacity: 0.7;
+  }
+
+  .main-nav a:hover {
+    opacity: 1;
+  }
+
+  .header__btn {
+    display: inline-flex;
+    width: auto;
+    padding: 0 24px;
+    box-shadow: 0 10px 25px #36536b40;
+  }
+  /*=====================================*/
 
   /*LINA -> */
 
   .cta {
     padding-top: 111px;
     padding-bottom: 100px;
-    
   }
   .cta__inner {
     gap: 24px;
   }
-  .cta__title{
+  .cta__title {
     font-size: 48px;
     line-height: 56px;
     letter-spacing: -0.37px;
@@ -516,7 +576,7 @@ a {
     margin: 0;
     max-width: 445px;
   }
-  
+
   .cta__form {
     max-width: 445px;
     margin-inline: auto;
@@ -528,7 +588,6 @@ a {
     background: #fff;
     border-radius: 24px;
     box-shadow: 0 10px 25px rgba(54, 83, 107, 0.25);
-    
   }
   .cta__input {
     background: transparent;
@@ -539,7 +598,7 @@ a {
     padding-bottom: 15px;
   }
 
-  .cta__btn{
+  .cta__btn {
     width: 173px;
   }
   /*===============================*/
@@ -547,13 +606,18 @@ a {
 
 /*DESKTOP*/
 @media (min-width: 1024px) {
+  /*ROKAS -> */
+  .header__inner {
+    max-width: 1189px;
+    padding: 0 40px;
+  }
+  /*=====================================*/
 
-/*LINA -> */
+  /*LINA -> */
 
- .cta {
+  .cta {
     padding-top: 105px;
     padding-bottom: 80px;
-
   }
   .cta__inner {
     padding-left: 165px;
@@ -568,5 +632,4 @@ a {
     justify-self: end;
   }
   /*=====================================*/
-  
 }
