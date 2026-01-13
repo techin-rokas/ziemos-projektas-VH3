@@ -551,10 +551,12 @@ a {
   transition: color 0.2s ease;
 }
 
-.footer__social-link:hover {
-  /* Dizaine nurodyta variklio spalva užvedus (clr-primary-hover arba panaši) */
-  color: var(--clr-primary-hover);
+.footer__social-link:hover img {
+  /* Rožinė spalva per filter */
+  filter: brightness(0) saturate(100%) invert(68%) sepia(48%) saturate(2268%) hue-rotate(307deg) brightness(95%) contrast(87%);
 }
+
+
 
 /* 
 =========================================================
@@ -711,10 +713,6 @@ a {
   }
   /*=====================================*/
   /*Edvinas*/
-   .footer {
-    padding: 35px 0;
-  }
-
   .footer__inner {
     /* Naudojame tavo nustatytus Desktop paddingus kaip header'yje */
     max-width: 1189px; 
