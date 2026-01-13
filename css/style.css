@@ -167,12 +167,22 @@ a {
    VH3-2 Header / Navigation
    Rokas =>>  */
 .header {
+  min-height: 48px;
+  padding: 40px 24px;
+  margin: 0 auto;
 }
 .header__inner {
+  min-height: inherit;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40.76px 24px 58.48px 24.76px;
+  padding: 0px;
+  /* padding: 40.76px 24px 58.48px 24.76px; */
+}
+
+.main-nav,
+.header__btn {
+  display: none;
 }
 
 .logo__button:hover {
@@ -369,6 +379,56 @@ a {
    /*TABLET*/
 @media (min-width: 768px) {
 
+  /*ROKAS -> */
+
+  .header {
+    padding: 40px 40px;
+  }
+
+  .header__inner {
+    padding: 0px;
+}
+
+  .burger {
+    display: none;
+  }
+
+  .side-menu {
+    display: none;
+  }
+
+  .header__inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  .main-nav {
+    display: flex;
+    gap: 40px;
+    margin-left: 60px;
+    margin-right: auto;
+  }
+
+  .main-nav a {
+    font-family: var(--ff-body);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--clr-dark-2);
+    opacity: 0.7;
+  }
+
+  .main-nav a:hover {
+    opacity: 1;
+  }
+
+  .header__btn {
+    display: inline-flex;
+    width: auto;
+    padding: 0 24px;
+  }
+  /*=====================================*/
+
   /*LINA -> */
 
   .cta {
@@ -418,10 +478,19 @@ a {
     width: 173px;
   }
   /*===============================*/
+
+  
 }
 
 /*DESKTOP*/
 @media (min-width: 1024px) {
+
+/*ROKAS -> */
+.header__inner {
+  max-width: 1189px;
+  padding: 0 40px;
+}
+/*=====================================*/
 
 /*LINA -> */
 
@@ -443,5 +512,4 @@ a {
     justify-self: end;
   }
   /*=====================================*/
-  
 }
