@@ -14,6 +14,7 @@
   --clr-muted: #6c8294;
   --clr-active: #ff0000;
   --bg-color: #edf3f8;
+  --text-opacity: 0.7;
 
   /* Typography */
   --ff-heading: "DM Serif Display", serif;
@@ -268,9 +269,110 @@ a {
 /* =========================================================
    VH3-3 Who we work with
    Kristina =>>    */
-.partners {
+   .partners{
+  background-color: var(--clr-dark);
+  padding: 80px 16px 80px;
+  position: relative;
+  overflow: hidden;
 }
-.partners__inner {
+
+.partners__inner{
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.partners::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 260px;
+  pointer-events: none;
+  background: url("/images/bg-pattern-circle.svg");
+  background-repeat: no-repeat;
+  background-size: 780px;
+  background-position: 50% -590px;
+  opacity: 1;
+}
+
+.partners__logos{
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 22px;
+  align-items: center;
+  justify-items: center;
+  margin: 10px 0 59px;
+  row-gap: 40px;
+  column-gap: 22px;
+}
+
+.partners__logos img{
+  width: 120px;
+  height: 32px;
+  object-fit: contain;
+  opacity: 0.95;
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+}
+
+.partners__title, .partners__text{
+  width: 327px;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.partners__title{margin: 0 0 5px;}
+
+.partners__text{
+  font-size: 15px;
+  line-height: 28px;
+    color: rgba(var(--clr-light), var(--text-opacity));
+    margin: 0 auto 68px;
+}
+
+.partners__title{
+  text-align: center;
+  margin: 0 0 5px;
+  font-family: var(--ff-heading);
+  font-size: 32px;
+  line-height: 1.15;
+  font-weight: 600;
+  color: var(--clr-light);
+  letter-spacing: -0.02em;
+}
+
+.partners__btn{
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 28px;
+  border-radius: 999px;
+  border: 1px solid var(--clr-light);
+  background: transparent;
+  color: var(--clr-light);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 auto;
+}
+
+.partners__btn:hover{
+  border-color: rgba(255,255,255,.6);
 }
 
 /* =========================================================
@@ -317,7 +419,6 @@ a {
 .implement__title {
   width: 100%;
   max-width: 328px;
-  margin: 0;
   font-family: var(--ff-heading);
   font-size: 36px;
   line-height: 36px;
