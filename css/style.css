@@ -167,16 +167,16 @@ a {
    VH3-2 Header / Navigation
    Rokas =>>  */
 .header {
-  min-height: 48px;
-  padding: 40px 24px;
-  margin: 0 auto;
+  position: relative;
+  z-index: 100; /* Kad nuorodos būtų virš apskritimo */
+  background: transparent;
 }
 .header__inner {
   min-height: inherit;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
+  padding: 24px 24px;
 }
 
 .main-nav,
@@ -258,13 +258,206 @@ a {
 }
 
 /* =========================================================
-   VH3-9 Hero
-   Edvinas =>>   */
+   VH3-9 Hero - Edvinas (Tikslumas 1px)
+   ========================================================= */
+
 .hero {
+  position: relative;
+  padding-top: 48px; /* Atstumas nuo header teksto iki viršaus */
+  padding-bottom: 80px;
+
+  /* FONAS */
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: visible;
+  /* MOBILE: Apskritimas centre, stipriai pakeltas į viršų (-520px) */
 }
-.hero__inner {
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 780px;
+  height: 780px;
+  background-image: url("../images/bg-pattern-circle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  pointer-events: none;
+  top: -520px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__media {
+  width: min(320px, 100%);
+  margin-bottom: 48px;
+  /* Telefono iliustracijos pozicija */
+}
+
+.hero__img {
+  width: 100%;
+  height: auto;
+  /* Tikslus šešėlis pagal dizainą */
+  filter: drop-shadow(25px 50px 100px rgba(54, 83, 107, 0.301));
+}
+
+.hero__title {
+  font-family: var(--ff-heading);
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: -0.246px;
+  color: var(--clr-dark-2);
+  margin-bottom: 24px;
+}
+
+.hero__input-group {
+  width: 100%;
+  max-width: 327px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__input {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 24px;
+  padding: 0 27px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(54, 83, 107, 0.25);
+  font-family: var(--ff-body);
+  font-size: 15px;
+}
+
+.hero__text {
+  margin-top: 16px;
+  font-size: 15px;
+  color: var(--clr-muted);
+  text-align: center;
+}
+
+/* TABLET (768px) */
+@media (min-width: 768px) {
+  .hero {
+    /* Nustatome padding, kad tekstas nenuvažiuotų po navigacija */
+    padding-top: 140px;
+    margin-top: -120px; /* Pakeliame visą sekciją į viršų, kad fonas užeitų po headeriu */
+
+    background-repeat: no-repeat;
+
+    /* MOBILE (Pagal dizainą): Apskritimas užeina į viršų */
+
+    overflow: visible; /* Leidžiame fonui „kvėpuoti“ */
+  }
+  .hero::before {
+    top: -420px;
+  }
+
+  .hero__title {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.369px;
+    max-width: 573px;
+    margin-bottom: 40px;
+  }
+
+  .hero__input-group {
+    max-width: 445px;
+    flex-direction: row;
+    gap: 0; /* Panaikiname tarpą, nes jie susijungia */
+    position: relative;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(54, 83, 107, 0.25);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__input {
+    box-shadow: none; /* Nuimame vidinį šešėlį, nes jis dabar ant grupės */
+    flex-grow: 1;
+  }
+
+  /* TIKSLUS MYGTUKO DYDIS: 173px */
+  .hero__btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 173px;
+    height: 48px;
+    z-index: 2;
+  }
+
+  .hero__media {
+    max-width: 363px;
+  }
+}
+
+/* DESKTOP (1440px / min-width 1024px) */
+@media (min-width: 1024px) {
+  .hero::before {
+    top: -250px;
+    left: 1200px;
+    right: -180px;
+    transform: none;
+  }
+  .hero .container {
+    max-width: 1110px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero__inner {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    text-align: left;
+    max-width: 1110px; /* Pagal XD pagrindinį rėmą */
+    padding: 0;
+  }
+
+  .hero__content {
+    max-width: 545px;
+  }
+
+  .hero__title {
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -0.554px;
+    text-align: left;
+    margin-bottom: 21px;
+  }
+
+  .hero__media {
+    margin-right: 0;
+    transform: translateX(110px);
+  }
+
+  .hero__form {
+    transform: translateY(2px);
+  }
+
+  .hero__input-group {
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero__text {
+    text-align: left;
+    margin-left: 27px;
+  }
+}
 /* =========================================================
    VH3-3 Who we work with
    Kristina =>>    */
@@ -499,10 +692,19 @@ a {
 .footer {
   background-color: var(--clr-dark);
   padding: 40px 0;
-  /* Fonas su apskritimu (pagal dizainą mobile) */
-  background-image: url('./assets/shared/desktop/bg-pattern-circle.svg');
+  background-image: url("../images/bg-pattern-circle.svg");
   background-repeat: no-repeat;
-  background-position: center -180px;
+
+  /* Nustatome dydį, kad atitiktų dizaino proporcijas */
+  background-size: 780px;
+
+  /* Pozicija: center (horizontaliai), 
+     o vertikaliai stumiame į apačią. 
+     Galite naudoti 'center bottom -350px' arba procentus: */
+  background-position: center 175px;
+
+  /* Svarbu: neleidžia fonui sukurti scrollbar'o */
+  overflow: hidden;
 }
 
 .footer__inner {
@@ -553,10 +755,9 @@ a {
 
 .footer__social-link:hover img {
   /* Rožinė spalva per filter */
-  filter: brightness(0) saturate(100%) invert(68%) sepia(48%) saturate(2268%) hue-rotate(307deg) brightness(95%) contrast(87%);
+  filter: brightness(0) saturate(100%) invert(68%) sepia(48%) saturate(2268%)
+    hue-rotate(307deg) brightness(95%) contrast(87%);
 }
-
-
 
 /* 
 =========================================================
@@ -664,8 +865,8 @@ a {
 
   /*Edvinas*/
   .footer {
-    padding: 30px 0;
-    background-position: center right -200px; /* Apskritimas pasislenka */
+    background-size: 780px;
+    background-position: calc(100% + 320px) -55px;
   }
 
   .footer__inner {
@@ -715,11 +916,12 @@ a {
   /*Edvinas*/
   .footer__inner {
     /* Naudojame tavo nustatytus Desktop paddingus kaip header'yje */
-    max-width: 1189px; 
+    max-width: 1189px;
     padding: 0 40px;
   }
-  
+
   .footer {
-      background-position: calc(100% + 150px) center;
+    background-size: 780px;
+    background-position: calc(100% + 130px) -100px;
   }
 }
