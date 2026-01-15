@@ -14,6 +14,7 @@
   --clr-muted: #6c8294;
   --clr-active: #ff0000;
   --bg-color: #edf3f8;
+  --text-opacity: 0.7;
 
   /* Typography */
   --ff-heading: "DM Serif Display", serif;
@@ -461,9 +462,225 @@ a {
 /* =========================================================
    VH3-3 Who we work with
    Kristina =>>    */
-.partners {
+   .partners{
+  background-color: var(--clr-dark);
+  padding: 80px 16px;
+  position: relative;
+  overflow: hidden;
 }
-.partners__inner {
+
+.partners__inner{
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.partners::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+    height: 260px;
+      pointer-events: none;
+  z-index: 0;
+  background: url("/images/bg-pattern-circle.svg");
+  background-repeat: no-repeat;
+  background-size: 780px;
+  background-position: 50% -590px;
+}
+
+.partners__logos{
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 22px;
+  align-items: center;
+  justify-items: center;
+  margin: 10px 0 59px;
+  row-gap: 40px;
+  column-gap: 22px;
+}
+
+.partners__logos img{
+  width: 120px;
+  height: 32px;
+  min-width: 120px;
+  min-height: 32px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+}
+
+.partners__title, .partners__text{
+  width: 327px;
+  text-align: center;
+  max-width: 100%;
+}
+
+.partners__text{
+  font-size: 15px;
+  line-height: 28px;
+    color: rgba(251, 252, 254, 0.7);
+    margin: 0 auto 68px;
+}
+
+.partners__title{
+  text-align: center;
+  margin: 0 0 5px;
+  font-family: var(--ff-heading);
+  font-size: 32px;
+  line-height: 1.15;
+  font-weight: 600;
+  color: var(--clr-light);
+  letter-spacing: -0.02em;
+}
+
+.partners__btn{
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 28px;
+  border-radius: 999px;
+  border: 1px solid var(--clr-light);
+  background: transparent;
+  color: var(--clr-light);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 auto;
+  transition: 0.25s ease;
+}
+
+.partners__btn:hover{
+  background: #fff;
+  color: var(--clr-dark);
+  border-color: #fff;
+}
+
+/* ===== TABLET (768–1023) ===== */
+@media (min-width: 768px) {
+  .partners{
+    padding: 88px 24px;
+  }
+
+  .partners__inner{
+    max-width: 720px;
+  }
+
+  .partners::before{
+    height: 240px;
+    background-size: 930px;
+    background-position: 50% -700px;
+  }
+
+  .partners__logos{
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(120px 1fr));
+    column-gap: 40px;
+    row-gap: 62px;
+    margin: 0 0 70px;
+  }
+
+  .partners__logos img{
+    width: 140px;
+    height: 36px;
+    max-width: 100%;
+  }
+
+  .partners__title,
+  .partners__text{
+    width: 456px;
+  }
+
+  .partners__title{
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.37px;
+  }
+
+  .partners__btn{
+    width: 140px;
+  }
+}
+
+/* ===== DESKTOP (>=1024) ===== */
+@media (min-width: 1024px){
+  .partners{
+    padding: 96px 64px;
+  }
+
+  .partners__inner{
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 520px 1fr;
+    align-items: center;
+    column-gap: 120px;
+    text-align: left;
+  }
+
+  .partners__logos{
+    grid-column: 2;
+    grid-row: 1/4;
+    margin: 0;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 56px;
+    row-gap: 40px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .partners__logos img{
+    width: 150px;
+    height: 38px;
+  }
+
+  .partners__title,
+  .partners__text{
+    width: 420px;
+    max-width: 100%;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .partners__title{
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+    font-size: 48px;
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+
+  .partners__text{
+    grid-column: 1;
+    grid-row: 2;
+    text-align: left;
+    height: auto;
+    margin-bottom: 28px;
+  }
+
+  .partners__btn{
+    grid-column: 1;
+    grid-row: 3;
+    margin: 0; 
+    justify-self: start;
+  }
+
+  .partners::before{
+    height: 100%;
+    background-size: 800px;
+    background-position: -150px -400px;
+  }
 }
 
 /* =========================================================
@@ -510,7 +727,6 @@ a {
 .implement__title {
   width: 100%;
   max-width: 328px;
-  margin: 0;
   font-family: var(--ff-heading);
   font-size: 36px;
   line-height: 36px;
