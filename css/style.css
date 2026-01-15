@@ -993,7 +993,6 @@ a {
   }
 
   .header__inner {
-    padding: 0;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
@@ -1109,7 +1108,6 @@ a {
   /*ROKAS -> */
   .header__inner {
     max-width: 1189px;
-    padding: 0 40px;
   }
   /*=====================================*/
 
