@@ -1129,6 +1129,29 @@ a {
     hue-rotate(307deg) brightness(95%) contrast(87%);
 }
 
+/* PRICING PAGE  -->. */
+
+/* LINA */
+.pricing {
+  padding-top: 51.47px;
+  padding-bottom: 44px;
+}
+.pricing__title {
+  height: 44px;
+  margin: 0;
+
+  font-family: var(--ff-heading);
+  color: var(--clr-dark-2);
+  opacity: 1;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 0.25px;
+
+  text-align: center;
+}
+
+
+
 /* 
 =========================================================
    RESPONSIVE BREAKPOINTS (optional)
@@ -1233,6 +1256,18 @@ a {
   .cta__btn {
     width: 173px;
   }
+  /* Pricing Lina */
+  .pricing {
+    padding-top: 81px ;
+    padding-bottom: 57px;
+  }
+  .pricing__title {
+    font-size: 48px;
+    letter-spacing: 0.37px;
+    line-height: 56px;
+    height: 66px;
+    
+  }
   /*===============================*/
 
   /*Edvinas*/
@@ -1287,6 +1322,25 @@ a {
     justify-content: flex-start;
     margin: 0;
   }
+  /* Pricing Lina */
+  .pricing {
+    padding-top: 80px ;
+    padding-bottom: 60px;
+  }
+  .pricing__title {
+    font-size: 56px;
+    letter-spacing: 0.43px;
+    line-height: 56px;
+    height: 77px;
+    text-align: left;
+    /* padding-left: 141px; */
+    width: 100%;
+    max-width: 546px;
+  }
+  .pricing__inner {
+    padding-left: 165px;
+  }
+
   /*=====================================*/
   /*Edvinas*/
   .footer__inner {
