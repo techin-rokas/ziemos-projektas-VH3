@@ -824,9 +824,163 @@ a {
    VH3-5 Simple UI
    Vaiva =>> */
 .uiux {
+  background: var(--bg-color);
+  padding: 80px 0;
 }
+
 .uiux__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
 }
+
+.simple_media {
+  margin-bottom: 40px;
+  max-width: 328px;
+}
+
+.simple_img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.simple__title {
+  font-family: var(--ff-heading);
+  font-size: 36px;
+  line-height: 1.1;
+  color: var(--clr-dark-2);
+  margin-bottom: 16px;
+  max-width: 573px;
+  }
+
+.simple__text {
+  font-family: var(--ff-body);
+  font-size: 15px;
+  line-height: 28px;
+  color: var(--clr-muted);
+  max-width: 573px;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+
+  .uiux {
+    padding: 100px 0;
+  }
+
+  .uiux__inner {
+  max-width: 700px;
+  }
+
+ .simple_media {
+    max-width: 362px;
+    margin-bottom: 48px;
+  }
+ 
+  .simple__title {
+  font-size: 48px;
+  line-height: 56px;
+  white-space: nowrap;
+  margin-bottom: 24px;
+
+  }
+ 
+  .simple__text {
+  font-size: 15px;
+  line-height: 28px;
+  color: var(--clr-muted);
+  margin: 0;
+  }
+
+  .simple_img {
+  max-width: 362px;        
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.simple_content {
+  width: 100%;
+  max-width: 573px;
+}
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+
+  .uiux {
+    position: relative;
+    overflow: hidden; 
+    padding: 150px 0;
+    background-color: var(--bg-color);
+    z-index: 1;
+  }
+  .uiux__inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row-reverse; 
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1110px;
+    margin: 0 auto;
+   }
+
+  .simple_media {
+    position: relative; 
+    flex: 0 0 573px;
+    display: flex;
+    justify-content: flex-end;
+    transform: translateX(-165px);
+
+  }
+  
+  .simple_circle {
+    position: absolute;
+    width: 780px; 
+    height: 780px;
+    background-color: var(--clr-dark-2); 
+    opacity: 0.1; 
+    border-radius: 50%;
+    top: 50%;
+    right: -390px;   
+    transform: translateY(-50%); 
+    z-index: 0;
+    pointer-events: none;
+
+  }
+
+  .simple_content {
+    flex: 0 0 445px;
+    text-align: left;
+}
+  .simple__title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .simple__text {
+   width: 100%;
+    margin-top: 0; 
+    line-height: 28px;
+    opacity: 0.7; 
+  }
+
+.simple_img {
+    width: 130%; 
+    max-width: none;
+    height: auto;
+    display: block;
+    transform: translateX(80px); 
+    position: relative;
+    z-index: 2;
+}
+
+}
+
 /* DEV VH3-5 styles here */
 
 /* =========================================================
