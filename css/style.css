@@ -823,7 +823,7 @@ a {
 /* =========================================================
    VH3-5 Simple UI
    Vaiva =>> */
-.uiux {
+ .uiux {
   background: var(--bg-color);
   padding: 80px 0;
 }
@@ -906,7 +906,7 @@ a {
   width: 100%;
   max-width: 573px;
 }
-}
+} 
 
 /* DESKTOP */
 @media (min-width: 1024px) {
@@ -917,6 +917,7 @@ a {
     padding: 150px 0;
     background-color: var(--bg-color);
     z-index: 1;
+    
   }
   .uiux__inner {
     position: relative;
@@ -954,19 +955,43 @@ a {
   }
 
   .simple_content {
+    top: 1981px;
+    left: 165px;
+    width: 445px;
+    height: 122px;
+    opacity: 1;
     flex: 0 0 445px;
     text-align: left;
-}
+  }
+
   .simple__title {
+    top: 1981px;
+    left: 165px;
+    width: 445px;
+    height: 66px;
+    text-align: left;
+    letter-spacing: -0.37px;
+    color: var(--clr-dark-2);
+    opacity: 1;
     font-size: 48px;
     line-height: 56px;
+    font-family: var(--ff-heading);
   }
 
   .simple__text {
-   width: 100%;
+    top: 2055px;
+    left: 165px;
+    width: 445px;
+    height: 48px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: var(--clr-muted);
+    opacity: 1;
+    width: 100%;
     margin-top: 0; 
     line-height: 28px;
     opacity: 0.7; 
+    font-family: var(--ff-body);
   }
 
 .simple_img {
@@ -979,9 +1004,8 @@ a {
     z-index: 2;
 }
 
-}
+} 
 
-/* DEV VH3-5 styles here */
 
 /* =========================================================
    VH3-6 Features
