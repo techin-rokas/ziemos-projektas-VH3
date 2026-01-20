@@ -1010,9 +1010,89 @@ a {
 /* =========================================================
    VH3-6 Features
    Vaiva =>> */
+   
 .features {
+  padding: 40px 20px;
+  background-color: #eff3f6; 
 }
+
 .features__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 48px; 
+  max-width: 1110px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.finances-card, 
+.banking-card, 
+.payments-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.finances-card__img,
+.banking-card__img,
+.payments-card__img {
+  width: 106px; 
+  height: auto;
+  margin-bottom: 32px;
+}
+
+.finances-card__heading,
+.banking-card__heading,
+.payments-card__heading {
+  font-family: sans-serif; 
+  color: #36536b;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.finances-card__text,
+.banking-card__text,
+.payments-card__text {
+  font-family: sans-serif;
+  color: #6c8294;
+  line-height: 1.6;
+  font-size: 15px;
+  max-width: 350px; 
+}
+
+/* TABLET  */
+
+@media (min-width: 768px) {
+  .features__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; 
+  }
+  
+  .finances-card__text,
+  .banking-card__text,
+  .payments-card__text {
+    font-size: 14px; 
+  }
+}
+
+/* DESKTOP  */
+
+@media (min-width: 1024px) {
+  .features {
+    padding: 80px 0;
+  }
+
+  .features__inner {
+    gap: 30px; 
+  }
+
+  .finances-card__text,
+  .banking-card__text,
+  .payments-card__text {
+    font-size: 15px;
+  }
 }
 
 /* =========================================================
