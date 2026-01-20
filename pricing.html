@@ -8,201 +8,195 @@
     <script src="js/main.js" defer></script>
   </head>
   <body>
-    <body>
-      <div class="app">
-        <!-- Navigation component + Header (same as Home) -->
-        <header class="header">
-          <div class="container header__inner">
-            <!-- logo + nav + burger + CTA -->
-            <div class="logo">
-              <a class="logo__button" href="index.html" title="Go to Home page">
-                <img class="logo__img" src="images/logo.svg" alt="Logo" />
-              </a>
-            </div>
-
-            <nav class="main-nav">
-              <a href="pricing.html">Pricing</a>
-              <a href="./about.html">About</a>
-              <a href="./contact.html">Contact</a>
-            </nav>
-
-            <button class="btn btn--primary header__btn">
-              Schedule a Demo
-            </button>
-
-            <button class="burger" id="burgerBtn" aria-label="Open menu">
-              <img id="burgerIcon" src="images/menu.svg" alt="" />
-            </button>
+    <div class="app">
+      <!-- Navigation component + Header (same as Home) -->
+      <header class="header">
+        <div class="container header__inner">
+          <!-- logo + nav + burger + CTA -->
+          <div class="logo">
+            <a class="logo__button" href="index.html" title="Go to Home page">
+              <img class="logo__img" src="images/logo.svg" alt="Logo" />
+            </a>
           </div>
-        </header>
 
-        <!-- Side menu (same as Home) -->
-        <aside class="side-menu" id="sideMenu">
-          <hr />
-
-          <nav class="side-menu__nav">
-            <a href="./pricing.html">Pricing</a>
+          <nav class="main-nav">
+            <a href="pricing.html">Pricing</a>
             <a href="./about.html">About</a>
             <a href="./contact.html">Contact</a>
           </nav>
 
-          <button class="side-menu__btn btn btn--primary">
-            Schedule a Demo
+          <button class="btn btn--primary header__btn">Schedule a Demo</button>
+
+          <button class="burger" id="burgerBtn" aria-label="Open menu">
+            <img id="burgerIcon" src="images/menu.svg" alt="" />
           </button>
-        </aside>
+        </div>
+      </header>
 
-        <main>
-          <!-- PRICING TITLE -->
-          <section class="pricing" aria-labelledby="pricing-title">
-            <div class="container pricing__inner">
-              <h1 class="pricing__title" id="pricing-title">Pricing</h1>
-              <!-- h1 Pricing -->
-            </div>
-          </section>
+      <!-- Side menu (same as Home) -->
+      <aside class="side-menu" id="sideMenu">
+        <hr />
 
-          <!-- PRICING PLANS (3 cards) -->
-          <section class="plans">
-            <div class="container plans__inner">
-              <div class="plans__container">
-                <div class="plan--free">
-                  <h2 class="plan__heading">Free Plan</h2>
-                  <p class="plan__description">
-                    Build and test using our core set of products with up to 100
-                    API requests
-                  </p>
-                  <p class="plan__price">$0.00</p>
-                  <hr />
-                  <div class="plan__benefits">
-                    <ul>
-                      <li class="available">Transactions</li>
-                      <li class="available">Auth</li>
-                      <li class="available">Identity</li>
-                      <li class="unavailable">Investments</li>
-                      <li class="unavailable">Assets</li>
-                      <li class="unavailable">Liabilities</li>
-                      <li class="unavailable">Income</li>
-                    </ul>
-                  </div>
-                  <hr />
-                  <button class="btn btn--secondary plan__btn">
-                    Request Access
-                  </button>
+        <nav class="side-menu__nav">
+          <a href="./pricing.html">Pricing</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+
+        <button class="side-menu__btn btn btn--primary">Schedule a Demo</button>
+      </aside>
+
+      <main>
+        <!-- PRICING TITLE -->
+        <section class="pricing" aria-labelledby="pricing-title">
+          <div class="container pricing__inner">
+            <h1 class="pricing__title" id="pricing-title">Pricing</h1>
+            <!-- h1 Pricing -->
+          </div>
+        </section>
+
+        <!-- PRICING PLANS (3 cards) -->
+        <section class="plans">
+          <div class="container plans__inner">
+            <div class="plans__container">
+              <div class="plan--free">
+                <h2 class="plan__heading">Free Plan</h2>
+                <p class="plan__description">
+                  Build and test using our core set of products with up to 100
+                  API requests
+                </p>
+                <p class="plan__price">$0.00</p>
+                <hr />
+                <div class="plan__benefits">
+                  <ul>
+                    <li class="available">Transactions</li>
+                    <li class="available">Auth</li>
+                    <li class="available">Identity</li>
+                    <li class="unavailable">Investments</li>
+                    <li class="unavailable">Assets</li>
+                    <li class="unavailable">Liabilities</li>
+                    <li class="unavailable">Income</li>
+                  </ul>
                 </div>
-                <div class="plan--basic">
-                  <h2 class="plan__heading">Basic Plan</h2>
-                  <p class="plan__description">
-                    Launch your project with unlimited requests and no
-                    contractual minimums
-                  </p>
-                  <p class="plan__price">$499.00</p>
-                  <hr />
-                  <div class="plan__benefits">
-                    <ul>
-                      <li class="available">Transactions</li>
-                      <li class="available">Auth</li>
-                      <li class="available">Identity</li>
-                      <li class="available">Investments</li>
-                      <li class="available">Assets</li>
-                      <li class="unavailable">Liabilities</li>
-                      <li class="unavailable">Income</li>
-                    </ul>
-                  </div>
-                  <hr />
-                  <button class="btn btn--secondary plan__btn">
-                    Request Access
-                  </button>
+                <hr />
+                <button class="btn btn--secondary plan__btn">
+                  Request Access
+                </button>
+              </div>
+              <div class="plan--basic">
+                <h2 class="plan__heading">Basic Plan</h2>
+                <p class="plan__description">
+                  Launch your project with unlimited requests and no contractual
+                  minimums
+                </p>
+                <p class="plan__price">$499.00</p>
+                <hr />
+                <div class="plan__benefits">
+                  <ul>
+                    <li class="available">Transactions</li>
+                    <li class="available">Auth</li>
+                    <li class="available">Identity</li>
+                    <li class="available">Investments</li>
+                    <li class="available">Assets</li>
+                    <li class="unavailable">Liabilities</li>
+                    <li class="unavailable">Income</li>
+                  </ul>
                 </div>
-                <div class="plan--premium">
-                  <h2 class="plan__heading">Premium Plan</h2>
-                  <p class="plan__description">
-                    Get tailored solutions, volume pricing, and dedicated
-                    support for your team
-                  </p>
-                  <p class="plan__price">$249.00</p>
-                  <hr />
-                  <div class="plan__benefits">
-                    <ul>
-                      <li class="available">Transactions</li>
-                      <li class="available">Auth</li>
-                      <li class="available">Identity</li>
-                      <li class="available">Investments</li>
-                      <li class="available">Assets</li>
-                      <li class="available">Liabilities</li>
-                      <li class="available">Income</li>
-                    </ul>
-                  </div>
-                  <hr />
-                  <button class="btn btn--secondary plan__btn">
-                    Request Access
-                  </button>
+                <hr />
+                <button class="btn btn--secondary plan__btn">
+                  Request Access
+                </button>
+              </div>
+              <div class="plan--premium">
+                <h2 class="plan__heading">Premium Plan</h2>
+                <p class="plan__description">
+                  Get tailored solutions, volume pricing, and dedicated support
+                  for your team
+                </p>
+                <p class="plan__price">$249.00</p>
+                <hr />
+                <div class="plan__benefits">
+                  <ul>
+                    <li class="available">Transactions</li>
+                    <li class="available">Auth</li>
+                    <li class="available">Identity</li>
+                    <li class="available">Investments</li>
+                    <li class="available">Assets</li>
+                    <li class="available">Liabilities</li>
+                    <li class="available">Income</li>
+                  </ul>
                 </div>
+                <hr />
+                <button class="btn btn--secondary plan__btn">
+                  Request Access
+                </button>
               </div>
             </div>
-          </section>
-
-          <!-- Ready to start? (same component as Home) -->
-          <section class="cta">
-            <div class="container cta__inner">
-              <!-- title + email input + button -->
-              <h2 class="cta__title">Ready to start?</h2>
-              <form class="cta__form">
-                <div class="cta__field">
-                  <label class="sr-only" for="cta-email">Email address</label>
-
-                  <input
-                    class="cta__input"
-                    id="cta-email"
-                    type="email"
-                    placeholder="Enter email address"
-                    required
-                  />
-
-                  <button class="btn btn--primary cta__btn" type="submit">
-                    Schedule a Demo
-                  </button>
-                </div>
-              </form>
-            </div>
-          </section>
-        </main>
-
-        <!-- Footer (same as Home) -->
-        <footer class="footer">
-          <div class="container footer__inner">
-            <a href="#" class="footer__logo">
-              <img
-                src="images/logo.svg"
-                alt="Payapi logo"
-                class="footer__logo-img"
-              />
-            </a>
-
-            <nav class="footer__nav">
-              <ul class="footer__links">
-                <li>
-                  <a href="./pricing.html" class="footer__link">Pricing</a>
-                </li>
-                <li><a href="./about.html" class="footer__link">About</a></li>
-                <li>
-                  <a href="./contact.html" class="footer__link">Contact</a>
-                </li>
-              </ul>
-            </nav>
-
-            <div class="footer__socials">
-              <a href="#" aria-label="Facebook" class="footer__social-link">
-                <img src="images/facebook.svg" alt="" />
-              </a>
-              <a href="#" aria-label="Twitter" class="footer__social-link">
-                <img src="images/twitter.svg" alt="" />
-              </a>
-              <a href="#" aria-label="LinkedIn" class="footer__social-link">
-                <img src="images/linkedin.svg" alt="" />
-              </a>
-            </div>
           </div>
-        </footer>
-      </div>
-    </body>
+        </section>
+
+        <!-- Ready to start? (same component as Home) -->
+        <section class="cta">
+          <div class="container cta__inner">
+            <!-- title + email input + button -->
+            <h2 class="cta__title">Ready to start?</h2>
+            <form class="cta__form">
+              <div class="cta__field">
+                <label class="sr-only" for="cta-email">Email address</label>
+
+                <input
+                  class="cta__input"
+                  id="cta-email"
+                  type="email"
+                  placeholder="Enter email address"
+                  required
+                />
+
+                <button class="btn btn--primary cta__btn" type="submit">
+                  Schedule a Demo
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer (same as Home) -->
+      <footer class="footer">
+        <div class="container footer__inner">
+          <a href="#" class="footer__logo">
+            <img
+              src="images/logo.svg"
+              alt="Payapi logo"
+              class="footer__logo-img"
+            />
+          </a>
+
+          <nav class="footer__nav">
+            <ul class="footer__links">
+              <li>
+                <a href="./pricing.html" class="footer__link">Pricing</a>
+              </li>
+              <li><a href="./about.html" class="footer__link">About</a></li>
+              <li>
+                <a href="./contact.html" class="footer__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="footer__socials">
+            <a href="#" aria-label="Facebook" class="footer__social-link">
+              <img src="images/facebook.svg" alt="" />
+            </a>
+            <a href="#" aria-label="Twitter" class="footer__social-link">
+              <img src="images/twitter.svg" alt="" />
+            </a>
+            <a href="#" aria-label="LinkedIn" class="footer__social-link">
+              <img src="images/linkedin.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
