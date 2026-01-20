@@ -223,7 +223,6 @@ a {
   flex-direction: column;
   transform: translate(100%);
   transition: transform 0.3s ease;
-  will-change: transform;
   z-index: 2000;
 }
 .side-menu.open {
@@ -257,7 +256,110 @@ a {
   width: 100%;
   margin-top: 30px;
 }
-
+/* =========================================================
+   VH3-12 Plans Rokas =>>  */
+.plans {
+  padding: 0 24px;
+}
+.plans__inner {
+  text-align: center;
+  padding: 0;
+}
+.plans__inner h2 {
+  font-family: var(--ff-heading);
+  color: var(--clr-primary);
+}
+.plan__description {
+  color: var(--clr-muted);
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 200;
+}
+.plan__heading {
+  margin: 9px 0;
+}
+.plan__benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.plan__price {
+  font-family: var(--ff-heading);
+  font-size: 56px;
+  letter-spacing: -0.43px;
+  font-weight: 550;
+  height: 77px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+.plans__inner ul {
+  list-style: none;
+  padding: 0;
+}
+.plans__inner li {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 16px;
+  line-height: 28px;
+  margin: 8px;
+  font-weight: 300;
+}
+.plans__inner li.available::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  background-image: url("../images/icon-check.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.plans__inner li.unavailable::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+.plans__inner li.unavailable {
+  opacity: 0.5;
+}
+.plans__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+}
+.plans__inner hr {
+  width: 100%;
+  border: none;
+  height: 1px;
+  background-color: #36536b40;
+}
+.plan__btn {
+  background: transparent;
+  color: var(--clr-dark-2);
+  border: 1px solid var(--clr-dark-2);
+  opacity: 1;
+  height: 48px;
+  width: 168px;
+  margin: 16px 0 38px 0;
+}
+.plans__inner > div:last-child .pricing__btn {
+  margin-bottom: 0;
+}
+.plan__btn:hover {
+  background-color: var(--clr-dark-2);
+  color: var(--clr-light);
+}
+.plan--basic .plan__heading,
+.plan--premium .plan__heading {
+  margin: 17px 0 9px 0;
+}
 /* =========================================================
    VH3-9 Hero - Edvinas (Tikslumas 1px)
    ========================================================= */
@@ -462,14 +564,14 @@ a {
 /* =========================================================
    VH3-3 Who we work with
    Kristina =>>    */
-   .partners{
+.partners {
   background-color: var(--clr-dark);
   padding: 80px 16px;
   position: relative;
   overflow: hidden;
 }
 
-.partners__inner{
+.partners__inner {
   max-width: 420px;
   margin: 0 auto;
   display: flex;
@@ -484,8 +586,8 @@ a {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
-    height: 260px;
-      pointer-events: none;
+  height: 260px;
+  pointer-events: none;
   z-index: 0;
   background: url("/images/bg-pattern-circle.svg");
   background-repeat: no-repeat;
@@ -493,7 +595,7 @@ a {
   background-position: 50% -590px;
 }
 
-.partners__logos{
+.partners__logos {
   position: relative;
   z-index: 1;
   display: grid;
@@ -506,7 +608,7 @@ a {
   column-gap: 22px;
 }
 
-.partners__logos img{
+.partners__logos img {
   width: 120px;
   height: 32px;
   min-width: 120px;
@@ -516,20 +618,21 @@ a {
   opacity: 0.95;
 }
 
-.partners__title, .partners__text{
+.partners__title,
+.partners__text {
   width: 327px;
   text-align: center;
   max-width: 100%;
 }
 
-.partners__text{
+.partners__text {
   font-size: 15px;
   line-height: 28px;
-    color: rgba(251, 252, 254, 0.7);
-    margin: 0 auto 68px;
+  color: rgba(251, 252, 254, 0.7);
+  margin: 0 auto 68px;
 }
 
-.partners__title{
+.partners__title {
   text-align: center;
   margin: 0 0 5px;
   font-family: var(--ff-heading);
@@ -540,7 +643,7 @@ a {
   letter-spacing: -0.02em;
 }
 
-.partners__btn{
+.partners__btn {
   position: relative;
   z-index: 1;
   display: inline-flex;
@@ -559,7 +662,7 @@ a {
   transition: 0.25s ease;
 }
 
-.partners__btn:hover{
+.partners__btn:hover {
   background: #fff;
   color: var(--clr-dark);
   border-color: #fff;
@@ -567,21 +670,21 @@ a {
 
 /* ===== TABLET (768–1023) ===== */
 @media (min-width: 768px) {
-  .partners{
+  .partners {
     padding: 88px 24px;
   }
 
-  .partners__inner{
+  .partners__inner {
     max-width: 720px;
   }
 
-  .partners::before{
+  .partners::before {
     height: 240px;
     background-size: 930px;
     background-position: 50% -700px;
   }
 
-  .partners__logos{
+  .partners__logos {
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(120px 1fr));
     column-gap: 40px;
@@ -589,35 +692,35 @@ a {
     margin: 0 0 70px;
   }
 
-  .partners__logos img{
+  .partners__logos img {
     width: 140px;
     height: 36px;
     max-width: 100%;
   }
 
   .partners__title,
-  .partners__text{
+  .partners__text {
     width: 456px;
   }
 
-  .partners__title{
+  .partners__title {
     font-size: 48px;
     line-height: 56px;
     letter-spacing: -0.37px;
   }
 
-  .partners__btn{
+  .partners__btn {
     width: 140px;
   }
 }
 
 /* ===== DESKTOP (>=1024) ===== */
-@media (min-width: 1024px){
-  .partners{
+@media (min-width: 1024px) {
+  .partners {
     padding: 96px 64px;
   }
 
-  .partners__inner{
+  .partners__inner {
     max-width: 1240px;
     margin: 0 auto;
     display: grid;
@@ -627,7 +730,7 @@ a {
     text-align: left;
   }
 
-  .partners__logos{
+  .partners__logos {
     grid-column: 2;
     grid-row: 1/4;
     margin: 0;
@@ -638,13 +741,13 @@ a {
     align-items: center;
   }
 
-  .partners__logos img{
+  .partners__logos img {
     width: 150px;
     height: 38px;
   }
 
   .partners__title,
-  .partners__text{
+  .partners__text {
     width: 420px;
     max-width: 100%;
     text-align: left;
@@ -652,7 +755,7 @@ a {
     margin-right: 0;
   }
 
-  .partners__title{
+  .partners__title {
     grid-column: 1;
     grid-row: 1;
     text-align: left;
@@ -661,7 +764,7 @@ a {
     margin-bottom: 8px;
   }
 
-  .partners__text{
+  .partners__text {
     grid-column: 1;
     grid-row: 2;
     text-align: left;
@@ -669,14 +772,14 @@ a {
     margin-bottom: 28px;
   }
 
-  .partners__btn{
+  .partners__btn {
     grid-column: 1;
     grid-row: 3;
-    margin: 0; 
+    margin: 0;
     justify-self: start;
   }
 
-  .partners::before{
+  .partners::before {
     height: 100%;
     background-size: 800px;
     background-position: -150px -400px;
@@ -823,7 +926,7 @@ a {
 /* =========================================================
    VH3-5 Simple UI
    Vaiva =>> */
- .uiux {
+.uiux {
   background: var(--bg-color);
   padding: 80px 0;
 }
@@ -855,7 +958,7 @@ a {
   color: var(--clr-dark-2);
   margin-bottom: 16px;
   max-width: 573px;
-  }
+}
 
 .simple__text {
   font-family: var(--ff-body);
@@ -867,91 +970,85 @@ a {
 
 /* TABLET */
 @media (min-width: 768px) {
-
   .uiux {
     padding: 100px 0;
   }
 
   .uiux__inner {
-  max-width: 700px;
+    max-width: 700px;
   }
 
- .simple_media {
+  .simple_media {
     max-width: 362px;
     margin-bottom: 48px;
   }
- 
-  .simple__title {
-  font-size: 48px;
-  line-height: 56px;
-  white-space: nowrap;
-  margin-bottom: 24px;
 
+  .simple__title {
+    font-size: 48px;
+    line-height: 56px;
+    white-space: nowrap;
+    margin-bottom: 24px;
   }
- 
+
   .simple__text {
-  font-size: 15px;
-  line-height: 28px;
-  color: var(--clr-muted);
-  margin: 0;
+    font-size: 15px;
+    line-height: 28px;
+    color: var(--clr-muted);
+    margin: 0;
   }
 
   .simple_img {
-  max-width: 362px;        
-  width: 100%;
-  height: auto;
-  display: block;
+    max-width: 362px;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .simple_content {
+    width: 100%;
+    max-width: 573px;
+  }
 }
-.simple_content {
-  width: 100%;
-  max-width: 573px;
-}
-} 
 
 /* DESKTOP */
 @media (min-width: 1024px) {
-
   .uiux {
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
     padding: 150px 0;
     background-color: var(--bg-color);
     z-index: 1;
-    
   }
   .uiux__inner {
     position: relative;
     z-index: 2;
     display: flex;
-    flex-direction: row-reverse; 
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
     max-width: 1110px;
     margin: 0 auto;
-   }
+  }
 
   .simple_media {
-    position: relative; 
+    position: relative;
     flex: 0 0 573px;
     display: flex;
     justify-content: flex-end;
     transform: translateX(-165px);
-
   }
-  
+
   .simple_circle {
     position: absolute;
-    width: 780px; 
+    width: 780px;
     height: 780px;
-    background-color: var(--clr-dark-2); 
-    opacity: 0.1; 
+    background-color: var(--clr-dark-2);
+    opacity: 0.1;
     border-radius: 50%;
     top: 50%;
-    right: -390px;   
-    transform: translateY(-50%); 
+    right: -390px;
+    transform: translateY(-50%);
     z-index: 0;
     pointer-events: none;
-
   }
 
   .simple_content {
@@ -988,46 +1085,43 @@ a {
     color: var(--clr-muted);
     opacity: 1;
     width: 100%;
-    margin-top: 0; 
+    margin-top: 0;
     line-height: 28px;
-    opacity: 0.7; 
+    opacity: 0.7;
     font-family: var(--ff-body);
   }
 
-.simple_img {
-    width: 130%; 
+  .simple_img {
+    width: 130%;
     max-width: none;
     height: auto;
     display: block;
-    transform: translateX(80px); 
+    transform: translateX(80px);
     position: relative;
     z-index: 2;
+  }
 }
-
-} 
-
 
 /* =========================================================
    VH3-6 Features
    Vaiva =>> */
-   
+
 .features {
   padding: 40px 20px;
-  background-color: #eff3f6; 
+  background-color: #eff3f6;
 }
 
 .features__inner {
   display: flex;
   flex-direction: column;
-  gap: 48px; 
+  gap: 48px;
   max-width: 1110px;
   margin: 0 auto;
   text-align: center;
 }
 
-
-.finances-card, 
-.banking-card, 
+.finances-card,
+.banking-card,
 .payments-card {
   display: flex;
   flex-direction: column;
@@ -1037,7 +1131,7 @@ a {
 .finances-card__img,
 .banking-card__img,
 .payments-card__img {
-  width: 106px; 
+  width: 106px;
   height: auto;
   margin-bottom: 32px;
 }
@@ -1045,7 +1139,7 @@ a {
 .finances-card__heading,
 .banking-card__heading,
 .payments-card__heading {
-  font-family: sans-serif; 
+  font-family: sans-serif;
   color: #36536b;
   font-size: 18px;
   margin-bottom: 16px;
@@ -1058,7 +1152,7 @@ a {
   color: #6c8294;
   line-height: 1.6;
   font-size: 15px;
-  max-width: 350px; 
+  max-width: 350px;
 }
 
 /* TABLET  */
@@ -1067,13 +1161,13 @@ a {
   .features__inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px; 
+    gap: 10px;
   }
-  
+
   .finances-card__text,
   .banking-card__text,
   .payments-card__text {
-    font-size: 14px; 
+    font-size: 14px;
   }
 }
 
@@ -1085,7 +1179,7 @@ a {
   }
 
   .features__inner {
-    gap: 30px; 
+    gap: 30px;
   }
 
   .finances-card__text,
@@ -1254,8 +1348,6 @@ a {
   text-align: center;
 }
 
-
-
 /* 
 =========================================================
    RESPONSIVE BREAKPOINTS (optional)
@@ -1312,6 +1404,35 @@ a {
     padding: 0 24px;
     box-shadow: 0 10px 25px #36536b40;
   }
+
+  /* =========================================================
+   VH3-12 Plans Rokas =>>  */
+  .plans__inner {
+    max-width: 1189px;
+  }
+  .plan__description {
+    min-height: 84px;
+  }
+  .plans {
+    padding: 0 40px;
+  }
+  .plans__container {
+    flex-direction: row;
+    flex-basis: 1;
+    gap: 10px;
+  }
+  .plans__inner > div:last-child .pricing__btn {
+    margin-bottom: 38px;
+  }
+  .plan__price {
+    font-size: 48px;
+    letter-spacing: -0.37px;
+    line-height: 72px;
+  }
+  .plan--basic .plan__heading,
+  .plan--premium .plan__heading {
+    margin: 9px 0;
+  }
   /*=====================================*/
 
   /*LINA -> */
@@ -1362,7 +1483,7 @@ a {
   }
   /* Pricing Lina */
   .pricing {
-    padding-top: 81px ;
+    padding-top: 81px;
     padding-bottom: 57px;
   }
   .pricing__title {
@@ -1370,7 +1491,6 @@ a {
     letter-spacing: 0.37px;
     line-height: 56px;
     height: 66px;
-    
   }
   /*===============================*/
 
@@ -1402,6 +1522,28 @@ a {
   .header__inner {
     max-width: 1189px;
   }
+
+  .header__inner {
+    max-width: 1189px;
+  }
+
+  /* =========================================================
+   VH3-12 Plans Rokas =>>  */
+  .plans__container {
+    text-align: start;
+    gap: 30px;
+  }
+  .plan__price {
+    justify-content: start;
+    font-size: 56px;
+  }
+  .plan__description {
+    min-height: auto;
+  }
+  .plan__benefits {
+    align-items: start;
+  }
+
   /*=====================================*/
 
   /*LINA -> */
@@ -1428,7 +1570,7 @@ a {
   }
   /* Pricing Lina */
   .pricing {
-    padding-top: 80px ;
+    padding-top: 80px;
     padding-bottom: 60px;
   }
   .pricing__title {
