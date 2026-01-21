@@ -349,7 +349,7 @@ a {
   width: 168px;
   margin: 16px 0 38px 0;
 }
-.plans__inner > div:last-child .pricing__btn {
+.plan--premium .plan__btn {
   margin-bottom: 0;
 }
 .plan__btn:hover {
@@ -1432,6 +1432,9 @@ a {
   .plan--basic .plan__heading,
   .plan--premium .plan__heading {
     margin: 9px 0;
+  }
+  .plan--premium .plan__btn {
+    margin-bottom: 38px;
   }
   /*=====================================*/
 
