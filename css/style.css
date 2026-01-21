@@ -1408,7 +1408,7 @@ a {
   /* =========================================================
    VH3-12 Plans Rokas =>>  */
   .plans__inner {
-    max-width: 1189px;
+    max-width: 1109px;
   }
   .plan__description {
     min-height: 84px;
@@ -1523,11 +1523,7 @@ a {
 @media (min-width: 1024px) {
   /*ROKAS -> */
   .header__inner {
-    max-width: 1189px;
-  }
-
-  .header__inner {
-    max-width: 1189px;
+    max-width: 1109px;
   }
 
   /* =========================================================
