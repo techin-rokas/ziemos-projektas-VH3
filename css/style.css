@@ -115,7 +115,9 @@ a {
   cursor: pointer;
   text-decoration: none;
 
-  transition: background-color 0.2s ease, color 0.2s ease; /* kad mygtuko spalva keistusi minkstai*/
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease; /* kad mygtuko spalva keistusi minkstai*/
 }
 
 .btn--primary {
@@ -178,6 +180,23 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 0;
+  position: relative;
+}
+.header__not-index::before {
+  content: "";
+  position: absolute;
+  width: 780px;
+  height: 780px;
+  background-image: url("../images/bg-pattern-circle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: -690px;
+  right: -500px;
+  pointer-events: none;
+  z-index: -1;
+  transition:
+    top 0.4s ease,
+    right 0.4s ease;
 }
 
 .main-nav,
@@ -1361,14 +1380,17 @@ a {
   .header {
     padding: 40px;
     position: relative;
-    z-index: 100; /* Kad nuorodos būtų virš apskritimo */
+    z-index: 100;
     background: transparent;
   }
-
   .header__inner {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
+  }
+  .header__not-index::before {
+    top: -500px;
+    right: -550px;
   }
 
   .burger {
@@ -1385,7 +1407,6 @@ a {
     margin-left: 60px;
     margin-right: auto;
   }
-
   .main-nav a {
     font-family: var(--ff-body);
     font-size: 15px;
@@ -1393,7 +1414,6 @@ a {
     color: var(--clr-dark-2);
     opacity: 0.7;
   }
-
   .main-nav a:hover {
     opacity: 1;
   }
@@ -1525,7 +1545,10 @@ a {
   .header__inner {
     max-width: 1109px;
   }
-
+  .header__not-index::before {
+    top: -580px;
+    right: -300px;
+  }
   /* =========================================================
    VH3-12 Plans Rokas =>>  */
   .plans__container {
