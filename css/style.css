@@ -193,7 +193,7 @@ a {
   top: -690px;
   right: -500px;
   pointer-events: none;
-  z-index: -1;
+  z-index: 3001;
   transition:
     top 0.4s ease,
     right 0.4s ease;
@@ -1391,6 +1391,7 @@ a {
   .header__not-index::before {
     top: -500px;
     right: -550px;
+    z-index: -1;
   }
 
   .burger {
