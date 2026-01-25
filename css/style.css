@@ -115,9 +115,7 @@ a {
   cursor: pointer;
   text-decoration: none;
 
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease; /* kad mygtuko spalva keistusi minkstai*/
+  transition: background-color 0.2s ease, color 0.2s ease; /* kad mygtuko spalva keistusi minkstai*/
 }
 
 .btn--primary {
@@ -194,9 +192,7 @@ a {
   right: -500px;
   pointer-events: none;
   z-index: 3001;
-  transition:
-    top 0.4s ease,
-    right 0.4s ease;
+  transition: top 0.4s ease, right 0.4s ease;
 }
 
 .main-nav,
@@ -608,7 +604,7 @@ a {
   height: 260px;
   pointer-events: none;
   z-index: 0;
-  background: url("/images/bg-pattern-circle.svg");
+  background: url("../images/bg-pattern-circle.svg");
   background-repeat: no-repeat;
   background-size: 780px;
   background-position: 50% -590px;
@@ -705,7 +701,7 @@ a {
 
   .partners__logos {
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(120px 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     column-gap: 40px;
     row-gap: 62px;
     margin: 0 0 70px;
@@ -743,9 +739,9 @@ a {
     max-width: 1240px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 520px 1fr;
+    grid-template-columns: minmax(360px, 420px) 1fr;
     align-items: center;
-    column-gap: 120px;
+    column-gap: clamp(32px, 6vw, 80px);
     text-align: left;
   }
 
@@ -753,7 +749,7 @@ a {
     grid-column: 2;
     grid-row: 1/4;
     margin: 0;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     column-gap: 56px;
     row-gap: 40px;
     justify-items: center;
@@ -761,8 +757,9 @@ a {
   }
 
   .partners__logos img {
-    width: 150px;
-    height: 38px;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
   }
 
   .partners__title,
@@ -801,7 +798,7 @@ a {
   .partners::before {
     height: 100%;
     background-size: 800px;
-    background-position: -150px -400px;
+    background-position: -350px -400px;
   }
 }
 
@@ -907,13 +904,13 @@ a {
 /* ===== DESKTOP (>=1024) ===== */
 @media (min-width: 1024px) {
   .implement__inner {
-    grid-template-columns: 445px 445px;
-    column-gap: 125px;
     align-items: center;
     justify-items: start;
     text-align: left;
-
-    padding: 150px 260px 150px 165px;
+    grid-template-columns: minmax(360px, 445px) minmax(360px, 445px);
+    column-gap: clamp(48px, 6vw, 125px);
+    padding: clamp(96px, 8vw, 150px) clamp(48px, 8vw, 260px)
+      clamp(96px, 8vw, 150px) clamp(48px, 6vw, 165px);
   }
 
   .implement_media {
@@ -924,11 +921,13 @@ a {
   }
 
   .implement_content {
-    width: 445px;
+    width: 100%;
+    max-width: 445px;
   }
 
   .implement__title {
-    max-width: 100%;
+    max-width: 445%;
+    width: 445px;
     font-size: 48px;
     line-height: 56px;
     letter-spacing: -0.37px;
