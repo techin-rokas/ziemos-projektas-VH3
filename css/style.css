@@ -827,8 +827,6 @@ a {
   overflow: hidden;
   border-radius: 8px;
   background: transparent;
-  filter: drop-shadow(0 25px 80px rgba(54, 83, 107, 0.22))
-    drop-shadow(0 10px 25px rgba(54, 83, 107, 0.1));
 }
 
 .implement_img {
