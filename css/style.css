@@ -115,7 +115,9 @@ a {
   cursor: pointer;
   text-decoration: none;
 
-  transition: background-color 0.2s ease, color 0.2s ease; /* kad mygtuko spalva keistusi minkstai*/
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease; /* kad mygtuko spalva keistusi minkstai*/
 }
 
 .btn--primary {
@@ -192,7 +194,9 @@ a {
   right: -500px;
   pointer-events: none;
   z-index: 3001;
-  transition: top 0.4s ease, right 0.4s ease;
+  transition:
+    top 0.4s ease,
+    right 0.4s ease;
 }
 
 .main-nav,
@@ -1504,9 +1508,14 @@ a {
   }
   /* Pricing Lina */
   .pricing {
-    padding-top: 81px;
-    padding-bottom: 57px;
+    padding: 81px 40px 57px 40px;
   }
+
+  .pricing__inner {
+    max-width: 1109px;
+    padding: 0;
+  }
+
   .pricing__title {
     font-size: 48px;
     letter-spacing: 0.37px;
@@ -1602,9 +1611,6 @@ a {
     /* padding-left: 141px; */
     width: 100%;
     max-width: 546px;
-  }
-  .pricing__inner {
-    padding-left: 165px;
   }
 
   /*=====================================*/
