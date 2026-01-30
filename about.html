@@ -1,204 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="app">
-        <!-- Navigation component + Header (same as Home) -->
-        <header class="header">
-            <div class="container header__inner header__not-index">
-                <!-- logo + nav + burger + CTA -->
-                <div class="logo">
-                    <a class="logo__button" href="index.html" title="Go to Home page">
-                        <img class="logo__img" src="images/logo.svg" alt="Logo" />
-                    </a>
-                </div>
+      <!-- Navigation component + Header (same as Home) -->
+      <header class="header">
+        <div class="container header__inner header__not-index">
+          <!-- logo + nav + burger + CTA -->
+          <div class="logo">
+            <a class="logo__button" href="index.html" title="Go to Home page">
+              <img class="logo__img" src="images/logo.svg" alt="Logo" />
+            </a>
+          </div>
 
-                <nav class="main-nav">
-                    <a href="pricing.html">Pricing</a>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
+          <nav class="main-nav">
+            <a href="pricing.html">Pricing</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
 
-                <button class="btn btn--primary header__btn">Schedule a Demo</button>
+          <button class="btn btn--primary header__btn">Schedule a Demo</button>
 
-                <button class="burger" id="burgerBtn" aria-label="Open menu">
-                    <img id="burgerIcon" src="images/menu.svg" alt="" />
+          <button class="burger" id="burgerBtn" aria-label="Open menu">
+            <img id="burgerIcon" src="images/menu.svg" alt="" />
+          </button>
+        </div>
+      </header>
+
+      <!-- Side menu (same as Home) -->
+      <aside class="side-menu" id="sideMenu">
+        <hr />
+
+        <nav class="side-menu__nav">
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <button class="side-menu__btn btn btn--primary">Schedule a Demo</button>
+      </aside>
+
+      <main>
+        <!-- ABOUT TITLE / INTRO -->
+        <section class="about" aria-labelledby="about-title">
+          <div class="container about__inner">
+            <h1 class="about__title" id="about-title">
+              We empower innovators by delivering access to the financial system
+            </h1>
+
+            <div class="about__content">
+              <!-- Row 1 -->
+              <article class="about__row">
+                <h2 class="about__heading">Our Vision</h2>
+                <p class="about__text">
+                  <!-- paragraph text -->
+                  Our main goal is to build beautiful consumer experiences along
+                  with developer-friendly infrastructure. The result is an
+                  intelligent tool that gives everyone the ability to create
+                  amazing products that solve big problems. We are deeply
+                  focused on democratizing financial services through
+                  technology.
+                </p>
+              </article>
+
+              <!-- Row 2 -->
+              <article class="about__row">
+                <h2 class="about__heading">Our Business</h2>
+                <p class="about__text">
+                  <!-- paragraph text -->
+                  At the core of our platform is the technical infrastructure
+                  APIs that connect consumers. Our innovative product provides
+                  key insights for businesses and individuals, as well as robust
+                  reporting for traditional financial institutions and
+                  developers.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ABOUT IMAGE  -->
+        <section class="about-image" aria-label="Team working together">
+          <div class="container about-image__inner">
+            <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcset="images/image-team-members-desktop.jpg"
+                alt="People working together at a table with a laptop"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="images/image-team-members-tablet.jpg"
+                alt="People working together at a table with a laptop"
+              />
+              <img
+                class="about-image__img"
+                src="images/image-team-members-mobile.jpg"
+                alt="People working together at a table with a laptop"
+              />
+            </picture>
+          </div>
+        </section>
+
+        <!-- ABOUT STATS -->
+        <section class="stats" aria-label="Company statistics">
+          <div class="container stats__inner">
+            <div class="stats__grid">
+              <!-- stat 1 -->
+              <div class="stats__item">
+                <p class="stats__label">Team Members</p>
+                <p class="stats__value">300+</p>
+              </div>
+
+              <!-- stat 2 -->
+              <div class="stats__item">
+                <p class="stats__label">Offices in the US</p>
+                <p class="stats__value">3</p>
+              </div>
+
+              <!-- stat 3 -->
+              <div class="stats__item">
+                <p class="stats__label">Transactions analyzed</p>
+                <p class="stats__value">10M+</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ABOUT DETAILS (Culture / People) -->
+        <section class="about-details" aria-label="Culture and People">
+          <div class="container about-details__inner">
+            <!-- Culture -->
+            <article class="about-details__row">
+              <h2 class="about-details__heading">The Culture</h2>
+              <p class="about-details__text">
+                <!-- paragraph text -->
+                We strongly believe there’s always an opportunity to learn from
+                each other outside of day-to-day work...
+              </p>
+            </article>
+
+            <!-- People -->
+            <article class="about-details__row">
+              <h2 class="about-details__heading">The People</h2>
+              <p class="about-details__text">
+                <!-- paragraph text -->
+                We’re all passionate about building a more efficient and
+                inclusive financial infrastructure together...
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Ready to start? (same component as Home) -->
+        <section class="cta">
+          <div class="container cta__inner">
+            <!-- title + email input + button -->
+            <h2 class="cta__title">Ready to start?</h2>
+            <form class="cta__form">
+              <div class="cta__field">
+                <label class="sr-only" for="cta-email">Email address</label>
+
+                <input
+                  class="cta__input"
+                  id="cta-email"
+                  type="email"
+                  placeholder="Enter email address"
+                  required
+                />
+
+                <button class="btn btn--primary cta__btn" type="submit">
+                  Schedule a Demo
                 </button>
-            </div>
-        </header>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
 
-        <!-- Side menu (same as Home) -->
-        <aside class="side-menu" id="sideMenu">
-            <hr />
+      <!-- Footer (same as Home) -->
+      <footer class="footer">
+        <div class="container footer__inner">
+          <a href="#" class="footer__logo">
+            <img
+              src="images/logo.svg"
+              alt="Payapi logo"
+              class="footer__logo-img"
+            />
+          </a>
 
-            <nav class="side-menu__nav">
-                <a href="pricing.html">Pricing</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+          <nav class="footer__nav">
+            <ul class="footer__links">
+              <li>
+                <a href="pricing.html" class="footer__link">Pricing</a>
+              </li>
+              <li><a href="about.html" class="footer__link">About</a></li>
+              <li>
+                <a href="contact.html" class="footer__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
 
-            <button class="side-menu__btn btn btn--primary">Schedule a Demo</button>
-        </aside>
-
-
-        <main>
-            <!-- ABOUT TITLE / INTRO -->
-            <section class="about" aria-labelledby="about-title">
-                <div class="container about__inner">
-                    <h1 class="about__title" id="about-title">
-                        We empower innovators<br />
-                        by delivering access to the<br />
-                        financial system
-                    </h1>
-
-                    <div class="about__content">
-                        <!-- Row 1 -->
-                        <article class="about__row">
-                            <h2 class="about__heading">Our Vision</h2>
-                            <p class="about__text">
-                                <!-- paragraph text -->
-                                Our main goal is to build beautiful consumer experiences along with
-                                developer-friendly infrastructure...
-                            </p>
-                        </article>
-
-                        <!-- Row 2 -->
-                        <article class="about__row">
-                            <h2 class="about__heading">Our Business</h2>
-                            <p class="about__text">
-                                <!-- paragraph text -->
-                                At the core of our platform is the technical infrastructure APIs that
-                                connect consumers...
-                            </p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ABOUT IMAGE  -->
-            <section class="about-image" aria-label="Team working together">
-                <div class="container about-image__inner">
-                    <img class="about-image__img" src="images/about/office-large.jpg"
-                        alt="People working together at a table with a laptop" />
-                </div>
-            </section>
-
-            <!-- ABOUT STATS -->
-            <section class="stats" aria-label="Company statistics">
-                <div class="container stats__inner">
-                    <div class="stats__grid">
-                        <!-- stat 1 -->
-                        <div class="stats__item">
-                            <p class="stats__label">Team Members</p>
-                            <p class="stats__value">300+</p>
-                        </div>
-
-                        <!-- stat 2 -->
-                        <div class="stats__item">
-                            <p class="stats__label">Offices in the US</p>
-                            <p class="stats__value">3</p>
-                        </div>
-
-                        <!-- stat 3 -->
-                        <div class="stats__item">
-                            <p class="stats__label">Transactions analyzed</p>
-                            <p class="stats__value">10M+</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ABOUT DETAILS (Culture / People) -->
-            <section class="about-details" aria-label="Culture and People">
-                <div class="container about-details__inner">
-                    <!-- Culture -->
-                    <article class="about-details__row">
-                        <h2 class="about-details__heading">The Culture</h2>
-                        <p class="about-details__text">
-                            <!-- paragraph text -->
-                            We strongly believe there’s always an opportunity to learn from each
-                            other outside of day-to-day work...
-                        </p>
-                    </article>
-
-                    <!-- People -->
-                    <article class="about-details__row">
-                        <h2 class="about-details__heading">The People</h2>
-                        <p class="about-details__text">
-                            <!-- paragraph text -->
-                            We’re all passionate about building a more efficient and inclusive
-                            financial infrastructure together...
-                        </p>
-                    </article>
-                </div>
-            </section>
-
-
-            <!-- Ready to start? (same component as Home) -->
-            <section class="cta">
-                <div class="container cta__inner">
-                    <!-- title + email input + button -->
-                    <h2 class="cta__title">Ready to start?</h2>
-                    <form class="cta__form">
-                        <div class="cta__field">
-                            <label class="sr-only" for="cta-email">Email address</label>
-
-                            <input class="cta__input" id="cta-email" type="email" placeholder="Enter email address"
-                                required />
-
-                            <button class="btn btn--primary cta__btn" type="submit">
-                                Schedule a Demo
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer (same as Home) -->
-        <footer class="footer">
-            <div class="container footer__inner">
-                <a href="#" class="footer__logo">
-                    <img src="images/logo.svg" alt="Payapi logo" class="footer__logo-img" />
-                </a>
-
-                <nav class="footer__nav">
-                    <ul class="footer__links">
-                        <li>
-                            <a href="pricing.html" class="footer__link">Pricing</a>
-                        </li>
-                        <li><a href="about.html" class="footer__link">About</a></li>
-                        <li>
-                            <a href="contact.html" class="footer__link">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <div class="footer__socials">
-                    <a href="#" aria-label="Facebook" class="footer__social-link">
-                        <img src="images/facebook.svg" alt="" />
-                    </a>
-                    <a href="#" aria-label="Twitter" class="footer__social-link">
-                        <img src="images/twitter.svg" alt="" />
-                    </a>
-                    <a href="#" aria-label="LinkedIn" class="footer__social-link">
-                        <img src="images/linkedin.svg" alt="" />
-                    </a>
-                </div>
-            </div>
-        </footer>
+          <div class="footer__socials">
+            <a href="#" aria-label="Facebook" class="footer__social-link">
+              <img src="images/facebook.svg" alt="" />
+            </a>
+            <a href="#" aria-label="Twitter" class="footer__social-link">
+              <img src="images/twitter.svg" alt="" />
+            </a>
+            <a href="#" aria-label="LinkedIn" class="footer__social-link">
+              <img src="images/linkedin.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
-
-
-
-</body>
-
+  </body>
 </html>
