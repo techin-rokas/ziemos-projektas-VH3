@@ -133,13 +133,13 @@ a {
 
 .btn--secondary {
   background-color: transparent;
-  color: var(--clr-light);
+  color: var(--clr-dark-2);
   border: 1px solid currentColor;
 }
 
 .btn--secondary:hover {
-  background-color: var(--clr-light);
-  color: var(--clr-dark);
+  background-color: var(--clr-dark-2);
+  color: var(--clr-light);
 }
 
 .btn--disabled,
@@ -1367,6 +1367,337 @@ a {
 
   text-align: center;
 }
+
+/* =========================================== CONTACT PAGE LAYOUT LINA ===================================== */
+
+.contact {}
+  
+.contact__title-wrap {
+  max-width: 1109px;
+  margin-bottom: 37px;
+  display: flex;
+  justify-content: center;
+
+
+}
+.contact__title {
+  margin: 0;
+  text-align: center;
+  width: 327px;
+  height: 116px;
+  letter-spacing: 0.25px;
+  color: var(--clr-dark-2);
+  opacity: 1;
+  font-family: var(--ff-heading);
+  font-weight: 550;
+}
+
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 87px;
+  align-items: start;
+}
+.contact__left,
+.contact__right{
+  max-width: 327pxpx;
+  margin: 0 auto;
+}
+
+.contact__right {
+  display: grid;
+  text-align: center;
+  justify-items: center;
+  gap: 2rem;
+}
+.contact__subtitle {
+  margin: 0 auto;
+  max-width: 327px;
+  height: 97px;
+  color: var(--clr-muted);
+  font-family: DMSerifDisplay-Regular;
+  opacity: 0.75;
+  line-height: 32px;
+  letter-spacing: 0.18px;
+  
+}
+.contact__logos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 2rem 2.25rem;
+  align-items: center;
+  justify-items: center;
+  max-width: 279.15px;
+  width: 100%;
+  
+}
+.contact__logo {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ----- FORM ----- */
+.contact-form {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 327pxpx;
+}
+
+.contact-form__field {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Underline inputs */
+.contact-form__input,
+.contact-form__textarea {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(54, 83, 107, 0.35);
+  padding: 0.8rem 0;
+  outline: none;
+}
+
+.contact-form__textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* Focus state */
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+  border-bottom-color: rgba(54, 83, 107, 0.9);
+}
+
+/* Checkbox row */
+.contact-form__check {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 1rem;
+  align-items: start;
+  margin-top: 0.5rem;
+}
+
+.contact-form__checkbox {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+}
+
+.contact-form__check-label {
+  line-height: 1.4;
+}
+/* Submit button (outline look) */
+.contact-form__btn {
+  justify-self: start;
+  margin-top: 1rem;
+  width: 152px;
+  
+}
+/* ===== BREAKPOINTS ===== */
+
+/* Tablet  */
+@media (min-width: 768px) {
+  
+  
+  .contact__title {
+    max-width: 573px;
+    width: 100%;
+    height: 178px;
+    font-size: 52px;
+    padding: 0px;
+    line-height: 65px;
+    letter-spacing: 0.37px;
+    text-align: center;
+    margin-top: 40px;
+    
+  }
+  .contact__subtitle {
+    max-width: 445px;
+    width: 100%;
+    height: 65px;
+    line-height: 32px;
+    letter-spacing: 0.18px;
+    opacity: 0.75;
+    font-size: 24px;
+  }
+
+  .contact__inner {
+    grid-template-columns: 1fr;
+    gap: 71px;
+  }
+  .contact__left {
+    max-width: 445px;
+    width: 100%;
+  }
+  .contact__right {
+    max-width: 541px;
+    width: 100%;
+  }
+  
+
+  .contact__logos {
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
+    gap: 2.25rem 2rem;
+    max-width: 541px;
+    height: 104px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1109px) {
+  .contact__title-wrap {
+    margin: 0 auto;
+    padding: 0;
+    justify-content: flex-start;
+  }
+  .contact__title {
+    text-align: left;
+    font-size: 56px;
+    max-width: 730px;
+    width: 100%;
+    height: 133px;
+    letter-spacing: 0.43px;
+    line-height: 56px;
+    opacity: 1;
+    padding: 0;
+  }
+  .contact__inner {
+  margin-top: 40px;
+    padding: 0;
+    max-width: 1110px;
+    width: 100%;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+  .contact__left{
+    max-width: 445px;
+    margin: 0;
+  }
+  .contact__right {
+    max-width: 541px;
+    margin: 0;
+    text-align: left;
+    justify-items: start;
+  }
+  .contact__logos {
+    grid-template-columns: repeat(3, minmax(165px, 1fr)) ;
+    justify-items: start;
+    max-width: 541px;
+    width: 100%;
+    height: 104px;
+    margin-bottom: 40px;
+  
+  }
+ .contact__subtitle {
+  margin: 0;
+  max-width: 445px;
+  height: 65px;
+  letter-spacing: 0.18px;
+  line-height: 32px;
+  opacity: 0.75;
+  }
+  .contact-form{
+    max-width: 445px;
+  } 
+}
+/* ===== ACTIVE / FOCUS STATES ===== */
+
+/* kad placeholderis / tekstas atrodytų tvarkingai */
+.contact-form__input::placeholder,
+.contact-form__textarea::placeholder {
+  opacity: 0.7;
+}
+
+/* focus – tamsesnė underline linija */
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+  border-bottom-color: rgba(54, 83, 107, 0.9);
+}
+
+/* optional: kai vartotojas jau kažką įvedė */
+.contact-form__input:not(:placeholder-shown),
+.contact-form__textarea:not(:placeholder-shown) {
+  border-bottom-color: rgba(54, 83, 107, 0.6);
+}
+
+/* ===== ERROR STATE ===== */
+.contact-form__error {
+  display: none;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin-top: 0.5rem;
+}
+
+/* kai field turi klaidą – raudonas tekstas + raudona linija */
+.contact-form__field--error .contact-form__input,
+.contact-form__field--error .contact-form__textarea {
+  border-bottom-color: rgba(255, 0, 0, 0.65);
+}
+
+.contact-form__field--error .contact-form__input::placeholder,
+.contact-form__field--error .contact-form__textarea::placeholder {
+  opacity: 1;
+  color: rgba(255, 0, 0, 0.75);
+}
+
+.contact-form__field--error .contact-form__error {
+  display: block;
+  color: rgba(255, 0, 0, 0.75);
+}
+
+/* jei error, bet focus – vis tiek raudona */
+.contact-form__field--error .contact-form__input:focus,
+.contact-form__field--error .contact-form__textarea:focus {
+  border-bottom-color: rgba(255, 0, 0, 0.75);
+}
+/* ===== CUSTOM CHECKBOX ===== */
+.contact-form__checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(54, 83, 107, 0.35);
+  border-radius: 2px;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.contact-form__checkbox:focus {
+  outline: 2px solid rgba(54, 83, 107, 0.35);
+  outline-offset: 2px;
+}
+/* checked: užpildytas ir varnelė */
+.contact-form__checkbox:checked {
+  background: rgba(186, 66, 112, 1); /* “pink” kaip Payapi */
+  border-color: rgba(186, 66, 112, 1);
+}
+
+.contact-form__checkbox:checked::after {
+  content: "";
+  width: 9px;
+  height: 5px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+  margin-bottom: 1px;
+}
+.contact-form__input{
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0.12px;
+}
+/*  ===================================== CONTACT PAGE PABAIGA ===============================*/
+
+
+
+
+
+
 
 /* 
 =========================================================
