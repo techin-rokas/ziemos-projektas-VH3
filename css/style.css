@@ -1404,9 +1404,106 @@ a {
   font-size: 32px;
   line-height: 36px;
   letter-spacing: 0.25px;
-
   text-align: center;
 }
+
+   /* <!-- ABOUT DETAILS (Culture / People) --> */
+  .about-details {
+  padding: 80px 24px;
+  background-color: #edf3f8; /* */
+}
+
+.about-details__inner {
+  max-width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px; 
+}
+
+.about-details__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;   
+}
+
+.about-details__heading {
+  font-family: var(--ff-heading);
+  font-size: 32px;
+  color: #36536b; 
+  margin-bottom: 16px;
+  letter-spacing: -0.18px;
+}
+
+.about-details__text {
+  font-family: var(--ff-body);
+  font-size: 15px;
+  line-height: 28px;
+  color: var(--clr-muted); 
+  max-width: 570px;
+}
+
+/* Tablet  */
+
+@media (min-width: 768px) {
+  .about-details {
+    padding: 92px 40px;
+  }
+  
+  .about-details__row {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .about-details__heading {
+    flex: 0 0 220px; 
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+
+  .about-details__text {
+    flex: 1;
+    max-width: 445px;
+  }
+}
+/* Desktop */
+
+@media (min-width: 1440px) {
+  .about-details {
+    padding: 120px 0;
+  }
+
+  .about-details__heading {
+    font-family: var(--ff-heading);
+    flex: 0 0 350px;
+    font-size: 48px; 
+    top: 1340px;
+    left: 39px;
+    width: 223px;
+    height: 44px;
+    text-align: left;
+    letter-spacing: -0.25px;
+    color: var(--clr-dark-2);
+    opacity: 1;
+  }
+
+  .about-details__text {
+    max-width: 635px;
+    top: 1332px;
+    left: 272px;
+    width: 456px;
+    height: 132px;
+/* UI Properties */
+    text-align: left;
+    letter-spacing: 0px;
+    color: #6C8294;
+    opacity: 1;
+  }
+}
+
 
 /* =========================================== CONTACT PAGE LAYOUT LINA ===================================== */
 
