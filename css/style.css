@@ -1496,13 +1496,86 @@ a {
     left: 272px;
     width: 456px;
     height: 132px;
-/* UI Properties */
     text-align: left;
     letter-spacing: 0px;
     color: #6C8294;
     opacity: 1;
   }
 }
+
+
+  /* <!-- ABOUT STATS --> */
+  
+  .stats {
+  padding: 48px 24px;
+  background-color: #edf3f8; 
+  border-top: 1px solid rgba(54, 83, 107, 0.25); 
+  border-bottom: 1px solid rgba(54, 83, 107, 0.25);
+}
+
+.stats__inner {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.stats__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  text-align: center;
+}
+
+.stats__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stats__label {
+  font-size: 16px;
+  color: #36536b;
+  opacity: 0.7;
+}
+
+.stats__value {
+  font-family: var(--ff-heading); 
+  font-size: 56px;
+  color: #ba4270; 
+  line-height: 1.2;
+}
+
+/* Tablet  */
+
+@media (min-width: 768px) {
+  .stats {
+    padding: 64px 40px;
+  }
+
+  .stats__grid {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .stats__item {
+    flex: 1;
+    border-top: 1px solid rgba(54, 83, 107, 0.25);
+    padding-top: 16px;
+  }
+}
+
+/* Desktop  */
+
+@media (min-width: 1440px) {
+  .stats {
+    padding: 80px 0;
+  }
+  
+  .stats__grid {
+    gap: 30px;
+  }
+}
+
 
 
 /* =========================================== CONTACT PAGE LAYOUT LINA ===================================== */
