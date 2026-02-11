@@ -27,14 +27,25 @@
 
           <button class="btn btn--primary header__btn">Schedule a Demo</button>
 
-          <button class="burger" id="burgerBtn" aria-label="Open menu">
-            <img id="burgerIcon" src="images/menu.svg" alt="" />
+          <button
+            class="burger"
+            id="burgerBtn"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="sideMenu"
+          >
+            <img id="burgerIcon" src="images/menu.svg" alt="Menu icon" />
           </button>
         </div>
       </header>
 
       <!-- Side menu (same as Home) -->
-      <aside class="side-menu" id="sideMenu">
+      <aside
+        class="side-menu"
+        id="sideMenu"
+        aria-label="Main menu"
+        aria-hidden="true"
+      >
         <hr />
 
         <nav class="side-menu__nav">
@@ -59,7 +70,7 @@
         <section class="plans">
           <div class="container plans__inner">
             <div class="plans__container">
-              <div class="plan--free">
+              <div class="plan--free" aria-labelledby="free-plan-title">
                 <h2 class="plan__heading">Free Plan</h2>
                 <p class="plan__description">
                   Build and test using our core set of products with up to 100
@@ -79,11 +90,14 @@
                   </ul>
                 </div>
                 <hr />
-                <button class="btn btn--secondary plan__btn">
+                <button
+                  class="btn btn--secondary plan__btn"
+                  aria-label="Request access to Free Plan"
+                >
                   Request Access
                 </button>
               </div>
-              <div class="plan--basic">
+              <div class="plan--basic" aria-labelledby="basic-plan-title">
                 <h2 class="plan__heading">Basic Plan</h2>
                 <p class="plan__description">
                   Launch your project with unlimited requests and no contractual
@@ -103,11 +117,14 @@
                   </ul>
                 </div>
                 <hr />
-                <button class="btn btn--secondary plan__btn">
+                <button
+                  class="btn btn--secondary plan__btn"
+                  aria-label="Request access to Basic Plan"
+                >
                   Request Access
                 </button>
               </div>
-              <div class="plan--premium">
+              <div class="plan--premium" aria-labelledby="premium-plan-title">
                 <h2 class="plan__heading">Premium Plan</h2>
                 <p class="plan__description">
                   Get tailored solutions, volume pricing, and dedicated support
@@ -127,7 +144,10 @@
                   </ul>
                 </div>
                 <hr />
-                <button class="btn btn--secondary plan__btn">
+                <button
+                  class="btn btn--secondary plan__btn"
+                  aria-label="Request access to Premium Plan"
+                >
                   Request Access
                 </button>
               </div>
