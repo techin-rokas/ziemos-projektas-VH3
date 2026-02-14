@@ -10,6 +10,7 @@ burgerBtn.addEventListener("click", () => {
   sideMenu.setAttribute("aria-hidden", !isOpen);
 
   document.body.style.overflow = isOpen ? "hidden" : "";
+  document.body.classList.toggle("menu-open", isOpen);
 
   if (isOpen) {
     sideMenu.querySelector("a").focus();
@@ -21,6 +22,8 @@ document.addEventListener("click", (e) => {
 
   if (!sideMenu.contains(e.target) && !burgerBtn.contains(e.target)) {
     sideMenu.classList.remove("open");
+    document.body.classList.remove("menu-open");
+
     burgerIcon.src = "images/menu.svg";
     document.body.style.overflow = "";
     burgerBtn.setAttribute("aria-expanded", "false");
@@ -32,6 +35,7 @@ document.addEventListener("click", (e) => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && sideMenu.classList.contains("open")) {
     sideMenu.classList.remove("open");
+    document.body.classList.remove("menu-open");
     burgerIcon.src = "images/menu.svg";
     document.body.style.overflow = "";
     burgerBtn.setAttribute("aria-expanded", "false");
