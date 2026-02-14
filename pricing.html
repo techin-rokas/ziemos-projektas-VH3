@@ -14,12 +14,17 @@
         <div class="container header__inner header__not-index">
           <!-- logo + nav + burger + CTA -->
           <div class="logo">
-            <a class="logo__button" href="index.html" title="Go to Home page">
-              <img class="logo__img" src="images/logo.svg" alt="Logo" />
+            <a
+              class="logo__button"
+              href="index.html"
+              title="Go to Home page"
+              aria-label="Go to Home page"
+            >
+              <img class="logo__img" src="images/logo.svg" alt="" />
             </a>
           </div>
 
-          <nav class="main-nav">
+          <nav class="main-nav" aria-label="Primary navigation">
             <a href="pricing.html">Pricing</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
@@ -33,8 +38,9 @@
             aria-label="Open menu"
             aria-expanded="false"
             aria-controls="sideMenu"
+            title="Open menu"
           >
-            <img id="burgerIcon" src="images/menu.svg" alt="Menu icon" />
+            <img id="burgerIcon" src="images/menu.svg" alt="" />
           </button>
         </div>
       </header>
