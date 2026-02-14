@@ -708,6 +708,13 @@ body.menu-open .hero::before {
   place-items: center;
   position: relative;
   margin: 10px 0 59px;
+  order: -1;
+  list-style: none;
+  padding: 0;
+}
+
+.partners__logos li {
+  margin: 0;
 }
 
 .partners__logos img {
@@ -762,6 +769,11 @@ body.menu-open .hero::before {
   background: #fff;
   color: var(--clr-dark);
   border-color: #fff;
+}
+
+.partners__btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
 }
 
 /* ===== TABLET (768–1023) ===== */
