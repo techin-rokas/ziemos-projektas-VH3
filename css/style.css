@@ -162,11 +162,10 @@ a {
 }
 input::placeholder,
 textarea::placeholder {
-  color: #36536B;
+  color: #36536b;
   opacity: 0.5;
   font-family: PublicSans-Bold;
 }
-
 
 /* =========================================================
    
@@ -502,7 +501,7 @@ textarea::placeholder {
   padding: 0 27px;
   background: #fff;
   box-shadow: 0 10px 25px rgba(54, 83, 107, 0.25);
-  font-family:PublicSans-Bold;
+  font-family: PublicSans-Bold;
   font-weight: 600;
   font-size: 15px;
 }
@@ -511,7 +510,7 @@ textarea::placeholder {
   outline: none;
 }
 .hero__input::placeholder {
-  color: #36536B;
+  color: #36536b;
   opacity: 0.5; /* kad Safari nepablukintų */
 }
 
@@ -521,8 +520,6 @@ textarea::placeholder {
   color: var(--clr-muted);
   text-align: center;
 }
-
-
 
 /* TABLET (768px) */
 @media (min-width: 768px) {
@@ -677,6 +674,13 @@ textarea::placeholder {
   place-items: center;
   position: relative;
   margin: 10px 0 59px;
+  order: -1;
+  list-style: none;
+  padding: 0;
+}
+
+.partners__logos li {
+  margin: 0;
 }
 
 .partners__logos img {
@@ -695,20 +699,20 @@ textarea::placeholder {
 }
 
 .partners__text {
-    margin: 0 auto 68px;
+  margin: 0 auto 68px;
   font-size: 15px;
   line-height: 28px;
   color: rgba(251, 252, 254, 0.7);
 }
 
 .partners__title {
-    margin: 0 0 5px;
-      font-family: var(--ff-heading);
-        font-size: 32px;
-          line-height: 1.15;
+  margin: 0 0 5px;
+  font-family: var(--ff-heading);
+  font-size: 32px;
+  line-height: 1.15;
   font-weight: 600;
-    color: var(--clr-light);
-      letter-spacing: -0.02em;
+  color: var(--clr-light);
+  letter-spacing: -0.02em;
 }
 
 .partners__btn {
@@ -731,6 +735,11 @@ textarea::placeholder {
   background: #fff;
   color: var(--clr-dark);
   border-color: #fff;
+}
+
+.partners__btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
 }
 
 /* ===== TABLET (768–1023) ===== */
@@ -766,7 +775,7 @@ textarea::placeholder {
 
   .partners__title,
   .partners__text {
-    width: min(456px, 100%)
+    width: min(456px, 100%);
   }
 
   .partners__title {
@@ -817,7 +826,7 @@ textarea::placeholder {
 
   .partners__title,
   .partners__text {
-    width: min(420px,100%);
+    width: min(420px, 100%);
     text-align: left;
   }
 
@@ -859,15 +868,17 @@ textarea::placeholder {
 }
 
 .implement__inner {
-    display: grid;
+  display: grid;
   justify-items: center;
   text-align: center;
-  --implement-w:328px;
+  --implement-w: 328px;
   padding: 0;
 }
 
 .implement_content,
-.implement_media, .implement__title, .implement__text {
+.implement_media,
+.implement__title,
+.implement__text {
   width: min(328px, 100%);
 }
 
@@ -910,7 +921,7 @@ textarea::placeholder {
 /* ===== TABLET (768–1023) ===== */
 @media (min-width: 768px) and (max-width: 1023px) {
   .implement__inner {
-    --implement-w:573px;
+    --implement-w: 573px;
     padding: 100px 98px;
     justify-items: center;
     text-align: center;
@@ -1302,7 +1313,6 @@ textarea::placeholder {
   opacity: 1;
   color: #36536b;
 
-  
   font-size: 15px;
   line-height: 17px;
 
@@ -1315,7 +1325,6 @@ textarea::placeholder {
   font-family: PublicSans-Bold;
   font-weight: 600;
   opacity: 0.5;
-  
 }
 .cta__btn {
   width: 100%;
@@ -1631,7 +1640,7 @@ textarea::placeholder {
   margin: 0 auto;
   max-width: 327px;
   height: 97px;
-  color: #36536B;
+  color: #36536b;
   font-family: DMSerifDisplay-Regular;
   opacity: 0.75;
   line-height: 32px;
@@ -1688,16 +1697,16 @@ textarea::placeholder {
 .cta__input::placeholder {
   color: #6c8294;
   opacity: 0.5;
- }
-
- 
-
-
+}
 
 /* Focus state */
-.contact-form__btn:focus { outline: none; }
-.contact-form__btn:focus-visible { outline: auto; outline-offset: 3px; }
-
+.contact-form__btn:focus {
+  outline: none;
+}
+.contact-form__btn:focus-visible {
+  outline: auto;
+  outline-offset: 3px;
+}
 
 .contact-form__input:focus,
 .contact-form__textarea:focus {
@@ -1824,21 +1833,19 @@ textarea::placeholder {
     height: 65px;
     letter-spacing: 0.18px;
     line-height: 32px;
-   opacity: 0.75;
-   font-family: DMSerifDisplay-Regular;
-   font-weight: 600;
-
-
+    opacity: 0.75;
+    font-family: DMSerifDisplay-Regular;
+    font-weight: 600;
   }
   .contact-form {
     max-width: 445px;
   }
 
   .contact-form__field {
-  display: flex;
-  flex-direction: column;
-  gap: 4px; /* kontroliuoja atstumą */
-}
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* kontroliuoja atstumą */
+  }
 }
 /* ===== ACTIVE / FOCUS STATES ===== */
 
@@ -1846,13 +1853,12 @@ textarea::placeholder {
 .contact-form__input::placeholder,
 .contact-form__textarea::placeholder {
   opacity: 0.5;
-  color: #36536B;
-
+  color: #36536b;
 }
 
 /* focus – tamsesnė underline linija */
 .contact-form__input:focus-visible,
-.contact-form__textarea:focus-visible{
+.contact-form__textarea:focus-visible {
   border-bottom-color: rgba(54, 83, 107, 0.9);
 }
 
@@ -1871,9 +1877,8 @@ textarea::placeholder {
   letter-spacing: 0.08px;
   font-family: PublicSans-Thin_Medium;
   opacity: 0.5;
-  color: #FF0000;
+  color: #ff0000;
   margin-top: 4px;
-
 }
 
 /* kai field turi klaidą – raudonas tekstas + raudona linija */
@@ -1911,7 +1916,7 @@ textarea::placeholder {
   height: 24px;
   border: 1px solid rgba(54, 83, 107, 0.35);
   border-radius: 2px;
-  background: #36536B;
+  background: #36536b;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -1944,9 +1949,8 @@ textarea::placeholder {
   line-height: 25px;
   letter-spacing: 0.12px;
   font-family: PublicSans-Thin_Medium;
-  color: #36536B ;
+  color: #36536b;
   height: 45px;
-
 }
 /*  ===================================== CONTACT PAGE PABAIGA ===============================*/
 
