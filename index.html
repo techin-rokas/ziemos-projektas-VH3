@@ -1,226 +1,313 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PayIPY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PayIPY</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/main.js" defer></script>
-</head>
-
-<body>
-  <div class="app">
-    <!-- VH3-2 Navigation component + Header (Home page)
+  <body>
+    <div class="app">
+      <!-- VH3-2 Navigation component + Header (Home page)
    Rokas -->
-    <header class="header">
-      <div class="container header__inner">
-        <!-- logo + nav + burger + CTA -->
-        <div class="logo">
-          <a class="logo__button" href="index.html" title="Go to Home page">
-            <img class="logo__img" src="images/logo.svg" alt="Logo" />
-          </a>
-        </div>
+      <header class="header">
+        <div class="container header__inner">
+          <!-- logo + nav + burger + CTA -->
+          <div class="logo">
+            <a
+              class="logo__button"
+              href="index.html"
+              title="Go to Home page"
+              aria-label="Go to Home page"
+            >
+              <img class="logo__img" src="images/logo.svg" alt="" />
+            </a>
+          </div>
 
-        <nav class="main-nav">
+          <nav class="main-nav" aria-label="Primary navigation">
+            <a href="pricing.html">Pricing</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+
+          <button class="btn btn--primary header__btn">Schedule a Demo</button>
+
+          <button
+            class="burger"
+            id="burgerBtn"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="sideMenu"
+            title="Open menu"
+          >
+            <img id="burgerIcon" src="images/menu.svg" alt="" />
+          </button>
+        </div>
+      </header>
+
+      <aside
+        class="side-menu"
+        id="sideMenu"
+        aria-label="Main menu"
+        aria-hidden="true"
+      >
+        <hr />
+
+        <nav class="side-menu__nav">
           <a href="pricing.html">Pricing</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
         </nav>
 
-        <button class="btn btn--primary header__btn">Schedule a Demo</button>
+        <button class="side-menu__btn btn btn--primary">Schedule a Demo</button>
+      </aside>
 
-        <button class="burger" id="burgerBtn" aria-label="Open menu">
-          <img id="burgerIcon" src="images/menu.svg" alt="" />
-        </button>
-      </div>
-    </header>
-
-    <aside class="side-menu" id="sideMenu">
-      <hr />
-
-      <nav class="side-menu__nav">
-        <a href="pricing.html">Pricing</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <button class="side-menu__btn btn btn--primary">Schedule a Demo</button>
-    </aside>
-
-    <main>
-      <!-- VH3-9 Hero (Home page)
+      <main>
+        <!-- VH3-9 Hero (Home page)
     Edvinas -->
-      <section class="hero">
-        <div class="container hero__inner">
-          <div class="hero__media">
-            <img src="images/illustration-phone-mockup.svg" alt="" class="hero__img">
+        <section class="hero">
+          <div class="container hero__inner">
+            <div class="hero__media">
+              <img
+                src="images/illustration-phone-mockup.svg"
+                alt=""
+                class="hero__img"
+              />
+            </div>
+
+            <div class="hero__content">
+              <h1 class="hero__title">
+                Start building with our APIs for absolutely free.
+              </h1>
+
+              <form class="hero__form">
+                <div class="hero__input-group">
+                  <input
+                    type="email"
+                    placeholder="Enter email address"
+                    class="hero__input"
+                    required
+                  />
+                  <button type="submit" class="btn btn--primary hero__btn">
+                    Schedule a Demo
+                  </button>
+                </div>
+              </form>
+
+              <p class="hero__text">
+                Have any questions?
+                <a href="contact.html"><strong>Contact Us</strong></a>
+              </p>
+            </div>
           </div>
+        </section>
 
-          <div class="hero__content">
-            <h1 class="hero__title">Start building with our APIs for absolutely free.</h1>
+        <!-- VH3-3 "Who we work with" section (Home page)
+    Kristina -->
+        <section class="partners" aria-labelledby="partners-title">
+          <div class="container partners__inner">
+            <div class="partners__logos" aria-label="Our partners">
+              <img class="partners__logo" src="images/tesla.svg" alt="Tesla" />
+              <img
+                class="partners__logo"
+                src="images/microsoft.svg"
+                alt="Microsoft"
+              />
 
-            <form class="hero__form">
-              <div class="hero__input-group">
-                <input type="email" placeholder="Enter email address" class="hero__input" required>
-                <button type="submit" class="btn btn--primary hero__btn">Schedule a Demo</button>
+              <img
+                class="partners__logo"
+                src="images/hewlett-packard.svg"
+                alt="Hewlett Packard"
+              />
+              <img
+                class="partners__logo"
+                src="images/oracle.svg"
+                alt="Oracle"
+              />
+
+              <img
+                class="partners__logo"
+                src="images/google.svg"
+                alt="Google"
+              />
+              <img
+                class="partners__logo"
+                src="images/nvidia.svg"
+                alt="NVIDIA"
+              />
+            </div>
+
+            <h2 class="partners__title" id="partners-title">
+              Who we work with
+            </h2>
+
+            <p class="partners__text">
+              Today, millions of people around the world have successfully
+              connected their accounts to apps they love using our API. We
+              provide developers with the tools they need to create easy and
+              accessible experiences for their users.
+            </p>
+
+            <a class="partners__btn" href="#">About Us</a>
+          </div>
+        </section>
+
+        <!-- VH3-4 "Easy to implement" section (Home page)
+    Kristina -->
+        <section class="implement">
+          <div class="container implement__inner">
+            <div class="implement_media">
+              <img
+                class="implement_img"
+                src="images\illustration-easy-to-implement.svg"
+                alt="Code example"
+              />
+            </div>
+            <div class="implement_content">
+              <h2 class="implement__title">Easy to implement</h2>
+
+              <p class="implement__text">
+                Our API comes with just a few lines of code. You'll be up and
+                running in no time. We built our documentation page to integrate
+                payments functionality with ease.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- VH3-5 "Simple UI" section (Home page)
+    Vaiva -->
+
+        <section class="uiux">
+          <div class="container uiux__inner">
+            <div class="simple_media">
+              <div class="simple_circle"></div>
+              <img
+                class="simple_img"
+                src="images/illustration-simple-ui.svg"
+                alt="payapi example"
+              />
+            </div>
+            <div class="simple_content">
+              <h2 class="simple__title">Simple UI & UX</h2>
+              <p class="simple__text">
+                Our pre-built form is easy to integrate in your app or website’s
+                checkout flow and designed to optimize conversion.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- VH3-6 "Features" section (Home page)
+    Vaiva -->
+        <section class="features">
+          <div class="container features__inner">
+            <div class="finances-card">
+              <img
+                class="finances-card__img"
+                src="images/icon-personal-finances.svg"
+                alt="personal finances"
+              />
+              <h3 class="finances-card__heading">Personal Finances</h3>
+              <p class="finances-card__text">
+                Consolidate financial data from multiple sources and categorize
+                transactions up to 2 years of history. Analyze reports to
+                reconcile activities in your account.
+              </p>
+            </div>
+            <div class="banking-card">
+              <img
+                class="banking-card__img"
+                src="images/icon-banking-and-coverage.svg"
+                alt="banking and coverage"
+              />
+              <h3 class="banking-card__heading">Banking & Coverage</h3>
+              <p class="banking-card__text">
+                With our platform, you can speed up account onboarding and
+                support ongoing payments for checking, savings, credit card, and
+                brokerage accounts.
+              </p>
+            </div>
+            <div class="payments-card">
+              <img
+                class="payments-card__img"
+                src="images/icon-consumer-payments.svg"
+                alt="consumer payments"
+              />
+              <h3 class="payments-card__heading">Consumer Payments</h3>
+              <p class="payments-card__text">
+                It’s easier to set up secure bank payments with us through a
+                flow designed with the user experience in mind. Customers could
+                instantly authenticate their account.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- VH3-7 "Ready to start?" section (Home page)
+    Lina -->
+        <section class="cta">
+          <div class="container cta__inner">
+            <!--  title + email input + button -->
+            <h2 class="cta__title">Ready to start?</h2>
+            <form class="cta__form">
+              <div class="cta__field">
+                <label class="sr-only" for="cta-email">Email address</label>
+
+                <input
+                  class="cta__input"
+                  id="cta-email"
+                  type="email"
+                  placeholder="Enter email address"
+                  required
+                />
+
+                <button class="btn btn--primary cta__btn" type="submit">
+                  Schedule a Demo
+                </button>
               </div>
             </form>
-
-            <p class="hero__text">
-              Have any questions? <a href="contact.html"><strong>Contact Us</strong></a>
-            </p>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
-      <!-- VH3-3 "Who we work with" section (Home page)
-    Kristina -->
-      <section class="partners" aria-labelledby="partners-title">
-        <div class="container partners__inner">
-          <div class="partners__logos" aria-label="Our partners">
-            <img class="partners__logo" src="images/tesla.svg" alt="Tesla" />
-            <img class="partners__logo" src="images/microsoft.svg" alt="Microsoft" />
-
-            <img class="partners__logo" src="images/hewlett-packard.svg" alt="Hewlett Packard" />
-            <img class="partners__logo" src="images/oracle.svg" alt="Oracle" />
-
-            <img class="partners__logo" src="images/google.svg" alt="Google" />
-            <img class="partners__logo" src="images/nvidia.svg" alt="NVIDIA" />
-          </div>
-
-          <h2 class="partners__title" id="partners-title">Who we work with</h2>
-
-          <p class="partners__text">
-            Today, millions of people around the world have successfully connected their accounts to apps
-            they love using our API. We provide developers with the tools they need to create easy and
-            accessible experiences for their users.
-          </p>
-
-          <a class="partners__btn" href="#">About Us</a>
-        </div>
-      </section>
-
-      <!-- VH3-4 "Easy to implement" section (Home page)
-    Kristina -->
-      <section class="implement">
-        <div class="container implement__inner">
-          <div class="implement_media">
-            <img class="implement_img" src="images\illustration-easy-to-implement.svg" alt="Code example" />
-          </div>
-          <div class="implement_content">
-            <h2 class="implement__title">Easy to implement</h2>
-
-            <p class="implement__text">
-              Our API comes with just a few lines of code. You'll be up and
-              running in no time. We built our documentation page to integrate
-              payments functionality with ease.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- VH3-5 "Simple UI" section (Home page)
-    Vaiva -->
-
-       <section class="uiux">
-        <div class="container uiux__inner">
-          <div class="simple_media">
-            <div class="simple_circle"></div>
-            <img class="simple_img" src="images/illustration-simple-ui.svg" alt="payapi example">
-          </div>
-          <div class="simple_content">
-            <h2 class="simple__title"> Simple UI & UX </h2>
-            <p class="simple__text"> Our pre-built form is easy to integrate in your app or website’s checkout flow and
-              designed to optimize conversion. </p>
-          </div>
-        </div>
-      </section>  
-
- 
-
-            <!-- VH3-6 "Features" section (Home page)
-    Vaiva -->
-      <section class="features">
-        <div class="container features__inner">
-          <div class="finances-card">
-            <img class="finances-card__img" src="images/icon-personal-finances.svg" alt="personal finances" />
-            <h3 class="finances-card__heading"> Personal Finances </h3>
-            <p class="finances-card__text">
-              Consolidate financial data from multiple sources and categorize
-              transactions up to 2 years of history. Analyze reports to
-              reconcile activities in your account. </p>
-          </div>
-          <div class="banking-card">
-            <img class="banking-card__img" src="images/icon-banking-and-coverage.svg" alt="banking and coverage" />
-            <h3 class="banking-card__heading"> Banking & Coverage </h3>
-            <p class="banking-card__text">
-              With our platform, you can speed up account onboarding and support ongoing payments for checking, savings,
-              credit card, and brokerage
-              accounts. </p>
-          </div>
-          <div class="payments-card">
-            <img class="payments-card__img" src="images/icon-consumer-payments.svg" alt="consumer payments" />
-            <h3 class="payments-card__heading"> Consumer Payments </h3>
-            <p class="payments-card__text">
-              It’s easier to set up secure bank payments with us through a flow
-              designed with the user experience in mind. Customers could
-              instantly authenticate their account. </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- VH3-7 "Ready to start?" section (Home page)
-    Lina -->
-      <section class="cta">
-        <div class="container cta__inner">
-          <!--  title + email input + button -->
-          <h2 class="cta__title">Ready to start?</h2>
-          <form class="cta__form">
-            <div class="cta__field">
-              <label class="sr-only" for="cta-email">Email address</label>
-
-              <input class="cta__input" id="cta-email" type="email" placeholder="Enter email address" required />
-
-              <button class="btn btn--primary cta__btn" type="submit">
-                Schedule a Demo
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <!-- VH3-8 Footer (Home page)
+      <!-- VH3-8 Footer (Home page)
   Edvinas -->
-    <footer class="footer">
-      <div class="container footer__inner">
-        <a href="#" class="footer__logo">
-          <img src="images/logo.svg" alt="Payapi logo" class="footer__logo-img">
-        </a>
+      <footer class="footer">
+        <div class="container footer__inner">
+          <a href="#" class="footer__logo">
+            <img
+              src="images/logo.svg"
+              alt="Payapi logo"
+              class="footer__logo-img"
+            />
+          </a>
 
-        <nav class="footer__nav">
-          <ul class="footer__links">
-            <li><a href="pricing.html" class="footer__link">Pricing</a></li>
-            <li><a href="about.html" class="footer__link">About</a></li>
-            <li><a href="contact.html" class="footer__link">Contact</a></li>
-          </ul>
-        </nav>
+          <nav class="footer__nav">
+            <ul class="footer__links">
+              <li><a href="pricing.html" class="footer__link">Pricing</a></li>
+              <li><a href="about.html" class="footer__link">About</a></li>
+              <li><a href="contact.html" class="footer__link">Contact</a></li>
+            </ul>
+          </nav>
 
-        <div class="footer__socials">
-          <a href="#" aria-label="Facebook" class="footer__social-link">
-            <img src="images/facebook.svg" alt="">
-          </a>
-          <a href="#" aria-label="Twitter" class="footer__social-link">
-            <img src="images/twitter.svg" alt="">
-          </a>
-          <a href="#" aria-label="LinkedIn" class="footer__social-link">
-            <img src="images/linkedin.svg" alt="">
-          </a>
+          <div class="footer__socials">
+            <a href="#" aria-label="Facebook" class="footer__social-link">
+              <img src="images/facebook.svg" alt="" />
+            </a>
+            <a href="#" aria-label="Twitter" class="footer__social-link">
+              <img src="images/twitter.svg" alt="" />
+            </a>
+            <a href="#" aria-label="LinkedIn" class="footer__social-link">
+              <img src="images/linkedin.svg" alt="" />
+            </a>
+          </div>
         </div>
-      </div>
-    </footer>
-  </div>
-</body>
-
+      </footer>
+    </div>
+  </body>
 </html>
