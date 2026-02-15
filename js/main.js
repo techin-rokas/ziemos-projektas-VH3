@@ -2,40 +2,46 @@ const burgerBtn = document.getElementById("burgerBtn");
 const burgerIcon = document.getElementById("burgerIcon");
 const sideMenu = document.getElementById("sideMenu");
 
-burgerBtn.addEventListener("click", () => {
-  const isOpen = sideMenu.classList.toggle("open");
+let isOpen = false;
 
-  burgerIcon.src = isOpen ? "images/close.svg" : "images/menu.svg";
-  burgerBtn.setAttribute("aria-expanded", isOpen);
-  sideMenu.setAttribute("aria-hidden", !isOpen);
+function updateBurgerState(open) {
+  isOpen = open;
 
-  document.body.style.overflow = isOpen ? "hidden" : "";
+  const label = open ? "Close menu" : "Open menu";
 
-  if (isOpen) {
-    sideMenu.querySelector("a").focus();
+  sideMenu.classList.toggle("open", open);
+  document.body.classList.toggle("menu-open", open);
+  document.body.style.overflow = open ? "hidden" : "";
+
+  burgerIcon.src = open ? "images/close.svg" : "images/menu.svg";
+
+  burgerBtn.setAttribute("aria-expanded", open);
+  burgerBtn.setAttribute("aria-label", label);
+  burgerBtn.setAttribute("title", label);
+  sideMenu.setAttribute("aria-hidden", !open);
+
+  if (open) {
+    const firstLink = sideMenu.querySelector("a");
+    if (firstLink) firstLink.focus();
+  } else {
+    burgerBtn.focus();
   }
+}
+
+burgerBtn.addEventListener("click", () => {
+  updateBurgerState(!isOpen);
 });
 
 document.addEventListener("click", (e) => {
-  if (!sideMenu.classList.contains("open")) return;
+  if (!isOpen) return;
 
   if (!sideMenu.contains(e.target) && !burgerBtn.contains(e.target)) {
-    sideMenu.classList.remove("open");
-    burgerIcon.src = "images/menu.svg";
-    document.body.style.overflow = "";
-    burgerBtn.setAttribute("aria-expanded", "false");
-    sideMenu.setAttribute("aria-hidden", "true");
-    burgerBtn.focus();
+    updateBurgerState(false);
   }
 });
 
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && sideMenu.classList.contains("open")) {
-    sideMenu.classList.remove("open");
-    burgerIcon.src = "images/menu.svg";
-    document.body.style.overflow = "";
-    burgerBtn.setAttribute("aria-expanded", "false");
-    sideMenu.setAttribute("aria-hidden", "true");
-    burgerBtn.focus();
+  if (e.key === "Escape" && isOpen) {
+    updateBurgerState(false);
   }
 });

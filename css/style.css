@@ -115,7 +115,9 @@ a {
   cursor: pointer;
   text-decoration: none;
 
-  transition: background-color 0.2s ease, color 0.2s ease; /* kad mygtuko spalva keistusi minkstai*/
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease; /* kad mygtuko spalva keistusi minkstai*/
 }
 
 .btn--primary {
@@ -162,11 +164,10 @@ a {
 }
 input::placeholder,
 textarea::placeholder {
-  color: #36536B;
+  color: #36536b;
   opacity: 0.5;
   font-family: PublicSans-Bold;
 }
-
 
 /* =========================================================
    
@@ -200,7 +201,9 @@ textarea::placeholder {
   right: -500px;
   pointer-events: none;
   z-index: 3001;
-  transition: top 0.4s ease, right 0.4s ease;
+  transition:
+    top 0.4s ease,
+    right 0.4s ease;
 }
 
 .main-nav,
@@ -429,7 +432,6 @@ textarea::placeholder {
 
 .hero {
   position: relative;
-  padding-top: 48px; /* Atstumas nuo header teksto iki viršaus */
   padding-bottom: 80px;
 
   /* FONAS */
@@ -448,9 +450,19 @@ textarea::placeholder {
   background-size: contain;
   z-index: 0;
   pointer-events: none;
-  top: -520px;
+
+  top: 0;
   left: 50%;
-  transform: translateX(-50%);
+
+  transform: translate(-50%, -675px);
+  transition:
+    transform 0.4s ease,
+    top 0.4s ease,
+    right 0.4s ease;
+}
+
+body.menu-open .hero::before {
+  z-index: 3001;
 }
 
 .hero__inner {
@@ -463,15 +475,21 @@ textarea::placeholder {
 
 .hero__media {
   width: min(320px, 100%);
-  margin-bottom: 48px;
-  /* Telefono iliustracijos pozicija */
+  margin-bottom: -60px;
 }
 
 .hero__img {
-  width: 100%;
+  position: relative;
+  width: 64%;
   height: auto;
-  /* Tikslus šešėlis pagal dizainą */
+  margin: 0 auto;
   filter: drop-shadow(25px 50px 100px rgba(54, 83, 107, 0.301));
+
+  transform: translate(12px, -40px);
+  transition:
+    transform 0.4s ease,
+    top 0.4s ease,
+    right 0.4s ease;
 }
 
 .hero__title {
@@ -502,7 +520,7 @@ textarea::placeholder {
   padding: 0 27px;
   background: #fff;
   box-shadow: 0 10px 25px rgba(54, 83, 107, 0.25);
-  font-family:PublicSans-Bold;
+  font-family: PublicSans-Bold;
   font-weight: 600;
   font-size: 15px;
 }
@@ -511,7 +529,7 @@ textarea::placeholder {
   outline: none;
 }
 .hero__input::placeholder {
-  color: #36536B;
+  color: #36536b;
   opacity: 0.5; /* kad Safari nepablukintų */
 }
 
@@ -522,7 +540,9 @@ textarea::placeholder {
   text-align: center;
 }
 
-
+.hero__text a {
+  text-decoration: underline;
+}
 
 /* TABLET (768px) */
 @media (min-width: 768px) {
@@ -538,7 +558,12 @@ textarea::placeholder {
     overflow: visible; /* Leidžiame fonui „kvėpuoti“ */
   }
   .hero::before {
-    top: -420px;
+    transform: translate(-50%, -550px) scale(1.14);
+  }
+
+  .hero__img {
+    width: 80%;
+    transform: translate(12px, -40px);
   }
 
   .hero__title {
@@ -583,12 +608,18 @@ textarea::placeholder {
 
 /* DESKTOP (1440px / min-width 1024px) */
 @media (min-width: 1024px) {
-  .hero::before {
-    top: -250px;
-    left: 1200px;
-    right: -180px;
-    transform: none;
+  .hero__inner {
+    margin-bottom: 60px;
   }
+  .hero::before {
+    transform: translate(11%, -190px) scale(1);
+  }
+
+  .hero__img {
+    width: 100%;
+    transform: translate(-150px, 35px) scale(1.3);
+  }
+
   .hero .container {
     max-width: 1110px;
     padding-left: 0;
@@ -677,6 +708,13 @@ textarea::placeholder {
   place-items: center;
   position: relative;
   margin: 10px 0 59px;
+  order: -1;
+  list-style: none;
+  padding: 0;
+}
+
+.partners__logos li {
+  margin: 0;
 }
 
 .partners__logos img {
@@ -695,20 +733,20 @@ textarea::placeholder {
 }
 
 .partners__text {
-    margin: 0 auto 68px;
+  margin: 0 auto 68px;
   font-size: 15px;
   line-height: 28px;
   color: rgba(251, 252, 254, 0.7);
 }
 
 .partners__title {
-    margin: 0 0 5px;
-      font-family: var(--ff-heading);
-        font-size: 32px;
-          line-height: 1.15;
+  margin: 0 0 5px;
+  font-family: var(--ff-heading);
+  font-size: 32px;
+  line-height: 1.15;
   font-weight: 600;
-    color: var(--clr-light);
-      letter-spacing: -0.02em;
+  color: var(--clr-light);
+  letter-spacing: -0.02em;
 }
 
 .partners__btn {
@@ -731,6 +769,11 @@ textarea::placeholder {
   background: #fff;
   color: var(--clr-dark);
   border-color: #fff;
+}
+
+.partners__btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
 }
 
 /* ===== TABLET (768–1023) ===== */
@@ -766,7 +809,7 @@ textarea::placeholder {
 
   .partners__title,
   .partners__text {
-    width: min(456px, 100%)
+    width: min(456px, 100%);
   }
 
   .partners__title {
@@ -817,7 +860,7 @@ textarea::placeholder {
 
   .partners__title,
   .partners__text {
-    width: min(420px,100%);
+    width: min(420px, 100%);
     text-align: left;
   }
 
@@ -859,15 +902,17 @@ textarea::placeholder {
 }
 
 .implement__inner {
-    display: grid;
+  display: grid;
   justify-items: center;
   text-align: center;
-  --implement-w:328px;
+  --implement-w: 328px;
   padding: 0;
 }
 
 .implement_content,
-.implement_media, .implement__title, .implement__text {
+.implement_media,
+.implement__title,
+.implement__text {
   width: min(328px, 100%);
 }
 
@@ -910,7 +955,7 @@ textarea::placeholder {
 /* ===== TABLET (768–1023) ===== */
 @media (min-width: 768px) and (max-width: 1023px) {
   .implement__inner {
-    --implement-w:573px;
+    --implement-w: 573px;
     padding: 100px 98px;
     justify-items: center;
     text-align: center;
@@ -1302,7 +1347,6 @@ textarea::placeholder {
   opacity: 1;
   color: #36536b;
 
-  
   font-size: 15px;
   line-height: 17px;
 
@@ -1315,7 +1359,6 @@ textarea::placeholder {
   font-family: PublicSans-Bold;
   font-weight: 600;
   opacity: 0.5;
-  
 }
 .cta__btn {
   width: 100%;
@@ -1538,12 +1581,14 @@ textarea::placeholder {
 .stats__item {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 8px;
 }
 
 .stats__label {
   font-size: 16px;
-  color: #36536b;
+  color: #36536b; 
   opacity: 0.7;
 }
 
@@ -1552,7 +1597,7 @@ textarea::placeholder {
   font-size: 56px;
   color: #ba4270;
   line-height: 1.2;
-}
+}  
 
 /* Tablet  */
 
@@ -1560,24 +1605,67 @@ textarea::placeholder {
   .stats {
     padding: 64px 40px;
   }
-
   .stats__grid {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
+    gap: 80px
   }
 
   .stats__item {
     flex: 1;
-    border-top: 1px solid rgba(54, 83, 107, 0.25);
+    max-width: 250px;
+    border-top: 1px solid #36536b40;
+    border-bottom: 1px solid #36536b40;
     padding-top: 16px;
   }
+  .stats__item:nth-child(2) {
+    border-top-color: #36536b40;
+    border-bottom-color: #36536b40;
+  }
+  .stats__value {
+    height: 77px;
+    text-align: left;
+    letter-spacing: -0.43px;
+    color: #BA4270;
+    opacity: 1;
+    font-family: var(--ff-heading); 
+  }
 }
+
 
 /* Desktop  */
 
 @media (min-width: 1440px) {
-  .stats {
+.stats__grid {
+  display: flex;
+  justify-content: center;
+  gap: 80px; 
+  padding: 40px 0;
+}
+
+.stats__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  padding-bottom: 10px;
+  width: 200px; 
+}
+
+.stats__label {
+  color: #36536B;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.stats__value {
+  color: #BA4270;
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+}
+.stats {
     padding: 80px 0;
   }
 
@@ -1631,7 +1719,7 @@ textarea::placeholder {
   margin: 0 auto;
   max-width: 327px;
   height: 97px;
-  color: #36536B;
+  color: #36536b;
   font-family: DMSerifDisplay-Regular;
   opacity: 0.75;
   line-height: 32px;
@@ -1688,11 +1776,7 @@ textarea::placeholder {
 .cta__input::placeholder {
   color: #6c8294;
   opacity: 0.5;
- }
-
- 
-
-
+}
 
 /* Focus state */
 .contact-form__input:focus-visible,
@@ -1849,10 +1933,10 @@ textarea::placeholder {
   }
 
   .contact-form__field {
-  display: flex;
-  flex-direction: column;
-  gap: 4px; /* kontroliuoja atstumą */
-}
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* kontroliuoja atstumą */
+  }
 }
 /* ===== ACTIVE / FOCUS STATES ===== */
 
@@ -1860,13 +1944,12 @@ textarea::placeholder {
 .contact-form__input::placeholder,
 .contact-form__textarea::placeholder {
   opacity: 0.5;
-  color: #36536B;
-
+  color: #36536b;
 }
 
 /* focus – tamsesnė underline linija */
 .contact-form__input:focus-visible,
-.contact-form__textarea:focus-visible{
+.contact-form__textarea:focus-visible {
   border-bottom-color: rgba(54, 83, 107, 0.9);
 }
 
@@ -1885,9 +1968,8 @@ textarea::placeholder {
   letter-spacing: 0.08px;
   font-family: PublicSans-Thin_Medium;
   opacity: 0.5;
-  color: #FF0000;
+  color: #ff0000;
   margin-top: 4px;
-
 }
 
 /* kai field turi klaidą – raudonas tekstas + raudona linija */
@@ -1958,9 +2040,8 @@ textarea::placeholder {
   line-height: 25px;
   letter-spacing: 0.12px;
   font-family: PublicSans-Thin_Medium;
-  color: #36536B ;
+  color: #36536b;
   height: 45px;
-
 }
 /*  ===================================== CONTACT PAGE PABAIGA ===============================*/
 
@@ -2188,6 +2269,10 @@ textarea::placeholder {
   .plans__container {
     text-align: start;
     gap: 30px;
+  }
+  .plan__heading {
+    font-size: 32px;
+    letter-spacing: -0.43;
   }
   .plan__price {
     justify-content: start;
