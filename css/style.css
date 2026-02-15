@@ -1691,7 +1691,7 @@ body.menu-open .hero::before {
 }
 .contact__left,
 .contact__right {
-  max-width: 327pxpx;
+  max-width: 327px;
   margin: 0 auto;
 }
 
@@ -1765,13 +1765,15 @@ body.menu-open .hero::before {
 }
 
 /* Focus state */
-.contact-form__btn:focus {
-  outline: none;
-}
-.contact-form__btn:focus-visible {
-  outline: auto;
-  outline-offset: 3px;
-}
+.contact-form__input:focus-visible,
+.contact-form__textarea:focus-visible {
+  outline: 3px solid #7aa5ff; /* ta pati spalva kaip button */
+  outline-offset: 6px;
+} 
+
+.contact-form__btn:focus { outline: none; }
+.contact-form__btn:focus-visible { outline: auto; outline-offset: 3px; }
+
 
 .contact-form__input:focus,
 .contact-form__textarea:focus {
@@ -1781,7 +1783,7 @@ body.menu-open .hero::before {
 /* Checkbox row */
 .contact-form__check {
   display: grid;
-  grid-template-columns: 20px 1fr;
+  grid-template-columns: 26px 1fr;
   gap: 16px;
   align-items: start;
   margin-top: 8px;
@@ -1794,7 +1796,13 @@ body.menu-open .hero::before {
 }
 
 .contact-form__check-label {
-  line-height: 1.4;
+  font-family: PublicSans-Thin_Medium;
+  line-height: 25px;
+  font-size: 15px;
+  margin-top: -10px;
+  letter-spacing: 0.12px;
+  color: #36536B;
+  height: 45px;
 }
 /* Submit button (outline look) */
 .contact-form__btn {
@@ -1898,9 +1906,13 @@ body.menu-open .hero::before {
     height: 65px;
     letter-spacing: 0.18px;
     line-height: 32px;
-    opacity: 0.75;
-    font-family: DMSerifDisplay-Regular;
-    font-weight: 600;
+    color: #36536B;
+
+   opacity: 0.75;
+   font-family: DMSerifDisplay-Regular;
+   font-weight: 600;
+
+
   }
   .contact-form {
     max-width: 445px;
@@ -1977,22 +1989,22 @@ body.menu-open .hero::before {
 .contact-form__checkbox {
   appearance: none;
   -webkit-appearance: none;
-  width: 24pxpx;
+  width: 24px;
   height: 24px;
-  border: 1px solid rgba(54, 83, 107, 0.35);
-  border-radius: 2px;
-  background: #36536b;
+  background: rgba(54,83,107,0.25);
   display: grid;
   place-items: center;
   cursor: pointer;
   margin-top: 2px;
-  opacity: 0.25;
+  
 }
 
 .contact-form__checkbox:focus {
-  outline: 2px solid rgba(54, 83, 107, 0.35);
-  outline-offset: 2px;
+  outline: 3px solid #7aa5ff;
+  outline-offset: 4px;
 }
+
+
 /* checked: užpildytas ir varnelė */
 .contact-form__checkbox:checked {
   background: rgba(186, 66, 112, 1); /* “pink” kaip Payapi */
