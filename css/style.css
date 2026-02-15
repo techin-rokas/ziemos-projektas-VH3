@@ -1518,9 +1518,15 @@ textarea::placeholder {
 
 .stats {
   padding: 48px 24px;
+<<<<<<< Updated upstream
   background-color: #edf3f8;
   border-top: 1px solid rgba(54, 83, 107, 0.25);
   border-bottom: 1px solid rgba(54, 83, 107, 0.25);
+=======
+  background-color: (var(--bg-color));
+  position: relative; 
+  overflow: hidden;   
+>>>>>>> Stashed changes
 }
 
 .stats__inner {
@@ -1531,85 +1537,86 @@ textarea::placeholder {
 .stats__grid {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  text-align: center;
+  gap: 0; 
 }
 
 .stats__item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 8px;
+  align-items: center; 
+  padding: 32px 0;
+  border-top: 1px solid #36536b40;
+}
+
+.stats__item:last-child {
+  border-bottom: 1px solid #36536b40;
 }
 
 .stats__label {
   font-size: 16px;
-  color: #36536b; 
+  font-family: var(--ff-body);
+  color: var(--clr-dark-2);
   opacity: 0.7;
+  margin-bottom: 8px;
 }
 
 .stats__value {
   font-family: var(--ff-heading);
   font-size: 56px;
+<<<<<<< Updated upstream
   color: #ba4270;
+=======
+  color: #BA4270;
+>>>>>>> Stashed changes
   line-height: 1.2;
-}  
+  margin: 0;
+  font-weight: 700;
+}
 
-/* Tablet  */
+/* TABLET  */ 
 
 @media (min-width: 768px) {
   .stats {
     padding: 64px 40px;
   }
+
   .stats__grid {
     flex-direction: row;
     justify-content: space-between;
-    text-align: left;
-    gap: 80px
+    gap: 30px; 
   }
 
   .stats__item {
     flex: 1;
-    max-width: 250px;
-    border-top: 1px solid #36536b40;
-    border-bottom: 1px solid #36536b40;
-    padding-top: 16px;
-  }
-  .stats__item:nth-child(2) {
-    border-top-color: #36536b40;
-    border-bottom-color: #36536b40;
-  }
-  .stats__value {
-    height: 77px;
+    align-items: flex-start; 
     text-align: left;
-    letter-spacing: -0.43px;
-    color: #BA4270;
-    opacity: 1;
-    font-family: var(--ff-heading); 
+    padding: 16px 0;
+    border-bottom: 1px solid #36536b40;
   }
 }
 
-
-/* Desktop  */
+/* DESKTOP  */
 
 @media (min-width: 1440px) {
-.stats__grid {
-  display: flex;
-  justify-content: center;
-  gap: 80px; 
-  padding: 40px 0;
-}
+  
+  .stats::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: 450px;
+    height: 450px;
+    background-color:var(--clr-dark-2);
+    opacity: 0.05;
+    border-radius: 50%;
+  }
 
-.stats__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: left;
-  padding-bottom: 10px;
-  width: 200px; 
-}
+  .stats__inner {
+    position: relative;
+    z-index: 1;
+  }
 
+<<<<<<< Updated upstream
 .stats__label {
   color: #36536B;
   margin-bottom: 8px;
@@ -1631,6 +1638,19 @@ textarea::placeholder {
   }
 }
 
+=======
+  .stats__grid {
+    gap: 125px; 
+  }
+
+  .stats__value {
+    font-size: 56px;
+  }
+
+}
+
+
+>>>>>>> Stashed changes
 /* =========================================== CONTACT PAGE LAYOUT LINA ===================================== */
 
 .contact {
