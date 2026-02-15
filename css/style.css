@@ -1518,15 +1518,9 @@ textarea::placeholder {
 
 .stats {
   padding: 48px 24px;
-<<<<<<< Updated upstream
-  background-color: #edf3f8;
-  border-top: 1px solid rgba(54, 83, 107, 0.25);
-  border-bottom: 1px solid rgba(54, 83, 107, 0.25);
-=======
   background-color: (var(--bg-color));
   position: relative; 
   overflow: hidden;   
->>>>>>> Stashed changes
 }
 
 .stats__inner {
@@ -1563,11 +1557,7 @@ textarea::placeholder {
 .stats__value {
   font-family: var(--ff-heading);
   font-size: 56px;
-<<<<<<< Updated upstream
-  color: #ba4270;
-=======
   color: #BA4270;
->>>>>>> Stashed changes
   line-height: 1.2;
   margin: 0;
   font-weight: 700;
@@ -1616,29 +1606,6 @@ textarea::placeholder {
     z-index: 1;
   }
 
-<<<<<<< Updated upstream
-.stats__label {
-  color: #36536B;
-  margin-bottom: 8px;
-  font-size: 16px;
-}
-
-.stats__value {
-  color: #BA4270;
-  font-size: 48px;
-  font-weight: bold;
-  margin: 0;
-}
-.stats {
-    padding: 80px 0;
-  }
-
-  .stats__grid {
-    gap: 30px;
-  }
-}
-
-=======
   .stats__grid {
     gap: 125px; 
   }
@@ -1650,7 +1617,6 @@ textarea::placeholder {
 }
 
 
->>>>>>> Stashed changes
 /* =========================================== CONTACT PAGE LAYOUT LINA ===================================== */
 
 .contact {
